@@ -1,0 +1,86 @@
+
+html { 
+  background: url("../img/nebula.jpg") no-repeat center center fixed; 
+  background-size: cover;
+}
+
+h1 {
+	opacity: 0.6;
+	color: #ffffff;
+	text-align: center;
+	font-family: swfont,Garamond, serif;
+	font-weight: bold;
+	font-size: 40px;
+    margin: 0px 0px;
+}
+
+@font-face {
+    font-family: swfont;
+    src: url("font/Starjout.ttf");
+}
+
+#gameboard {
+  font-size: 100px;
+  font-family: helvetica;
+  text-align: center;
+  <!-- background-color: #333333; -->
+}
+
+#gameboard a:hover {
+    
+  text-decoration: none;
+  background-color: #99afca;
+  color: #1030ba;
+}
+
+.xmark {
+
+  background-image: url("../img/skywalker.jpg");
+  background-size: 100% 100%;
+    
+  background-color: black;
+  color: white;
+}
+
+.omark {
+  background-image: url("../img/vader.jpg");
+  background-size: 100% 100%;
+    
+  background-color: white;
+  color: black;
+}
+
+.boardcreation {
+  /* background-color: #572389; */
+  padding: 20px;
+}
+
+.create {
+    display: inline-block; 
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MATTHIAS CODE ===============================================
+body {
+  background-color: pink;
+}
+
+.gameon {
+  background-color: #009911;
+}
+
+#player_select {
+  background-color: #1030ba;
+  color: #99afca;
+  padding: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.winning {
+  background-color: black;
+  color: white;
+}
+============================================================*/

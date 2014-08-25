@@ -1,0 +1,9 @@
+.row {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.cell {
+	display: inline-block;
+	/* margin-left: -5px; */
+}

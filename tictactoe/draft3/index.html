@@ -1,0 +1,74 @@
+<html ng-app='tictactoeApp'>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>!TICTACTOE!</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.js"></script>
+        <script src="js/app.js"></script>
+        
+	</head>
+
+	<body ng-controller="tictactoeController">
+		<h1>-----tic tac toe-----</h1>
+		<h1>star wars edition</h1>    
+        
+        <section ng-hide="boardcreated" class="boardcreation">
+        <!-- this section is hidden when the board is created -->
+            <div class="create">
+                <input min="3" max="10" type="number" ng-model="size" />
+                <button class="btn btn-warning" ng-click="createBoard(size)">
+                    Create Game Board</button>
+            </div>
+            
+        </section>
+        
+        <section id="gameboard">
+        <div ng-repeat="row in board">
+          <span ng-repeat="field in row track by $index">
+            <span ng-show="field == defaultSymbol">
+                <a ng-class="{xmark: field == 'X', omark: field == 'O'}" 
+                   ng-click="takefield($parent.$index, $index, currentSymbol());">{{field}}
+                </a></span>
+            <!-- leave the spot alone if it's already marked -->
+            <span ng-show="field != defaultSymbol" 
+                  ng-class="{xmark: field == 'X', omark: field == 'O'}">{{field}}</span>
+          </span>
+        </div>
+        </section>
+    <!--        -->                                                
+	</body>
+
+</html>
+
+<!-- 
+                            * apply the game-on class if boardcreated evaluates to true
+  <body ng-controller='gameCtrl' ng-class="{gameon: boardcreated}">
+    
+<div class="container col-sm-8">
+
+      <h1>Recursive tinkering with Tic Tac Toe</h1>
+
+      <section id="player_select" class="form-group" ng-hide="boardcreated">
+      * this section is hidden when the board is created *
+        <label for="inp_player1">Player 1</label>
+        <input type="text" class="form-control" id="inp_player1" ng-model="players[0]" ng-focus="players[0] =''" placeholder="Please enter a name for Player 1" />
+        <label for="inp_player2">Player 2</label>
+        <input type="text" class="form-control" id="inp_player2" ng-model="players[1]" ng-focus="players[1] =''" placeholder="Please enter a name for Player 2" />
+      </section>
+<!--================================================================-->
+<!--
+      <h1 ng-show="end" class="winning"><span ng-hide="tie">{{ currentPlayer }} wins!</span><span ng-show="tie">It's a tie!</span></h1>
+      <section id="wincounter">
+        <h2>Wins</h2>
+        <ul>
+          <li>{{ players[0] }} has won {{ playerwins[0] }} games.</li>
+          <li>{{ players[1] }} has won {{ playerwins[1] }} games.</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
+-->

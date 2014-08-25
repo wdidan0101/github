@@ -1,0 +1,29 @@
+<html ng-app='tictactoeApp'>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TICTACTOE</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.js"></script>
+    <script src="js/main.js"></script>    
+	</head>
+
+	<body ng-controller="tictactoeController">
+		<h1>-----tic tac toe-----</h1>   
+        
+        <section ng-hide="gamestarted" class="gamestart">
+            <input type="number" ng-model="size" />
+            <button class="startbutton" ng-click="makeBoard(size)">Start Game</button>
+        </section>
+        
+        <section id="gameboard">
+          <div ng-repeat="row in board track by $index" class="row">
+            <div ng-repeat="cell in row track by $index" ng-click="takeCell($parent.$index, $index)" class="cell" ng-style="{'width':(100/size)+'%', 'padding-bottom':(100/size)+'%'}">
+                {{ cell }}
+            </div>
+          </div>
+        </section>
+
+	</body>
+</html>
