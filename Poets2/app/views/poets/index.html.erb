@@ -1,0 +1,19 @@
+<h1>Listing Poets</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Origin</th>
+  </tr>
+ 
+  <% @poets.each do |poet| %>
+    <tr>
+      <td> <%= link_to poet.name, poet %> </td> 
+      <td><%= poet.origin %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to "add a poet", new_poet_path %>
+</p>
