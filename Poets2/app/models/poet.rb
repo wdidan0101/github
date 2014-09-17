@@ -5,4 +5,5 @@ class Poet
   field :name, type: String  
   field :origin, type: String
 
+  has_many :poems
 end
