@@ -17,6 +17,7 @@ class PoemsController < ApplicationController
 
 	def create
 		@poem = Poem.new(poem_params)
+		@poem.poet = Poet.find(params[:poet_id])
 		if @poem.save
 			redirect_to poems_path
 		else

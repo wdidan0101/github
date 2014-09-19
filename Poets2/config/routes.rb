@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  
 
-  # get 'poets/index'
+  get 'welcome/index'
 
-  root 'poets#index'
+  #root 'poets#index'
+
+  ### POET ROUTES ##################################
 
   get 'poets/' => 'poets#index'
   post 'poets/' => 'poets#create'
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   put 'poets/:id' => 'poets#update'
   delete 'poets/:id' => 'poets#destroy'
 
-  #####################################
+  ### POEM ROUTES ##################################
 
   get 'poets/:poet_id/poems/' => 'poems#index', as: :poems
   post 'poets/:poet_id/poems/' => 'poems#create'
@@ -29,4 +30,31 @@ Rails.application.routes.draw do
   put 'poets/:poet_id/poems/:id' => 'poems#update'
   delete 'poets/:poet_id/poems/:id' => 'poems#destroy'
 
+  ### USERS ROUTES ###################################
+
+  #root 'users#new' 
+
+  get 'signup/' => 'users#new', as: :signup
+  get 'users/new' => 'users#new'
+  post 'users/' => 'users#create'
+
+  ### SESSIONS ROUTES #################################
+
+  root 'sessions#index'
+
+  get '/login' => 'sessions#new', as: :sessions
+  post '/login' => 'sessions#create'  
+  delete '/logout' =>'sessions#destroy', as: :log_out
+
+  ### WELCOME ROUTES ###################################
+
+  get '/welcome/:user_id' => 'welcome#index', as: :welcome
+
 end
+
+
+
+
+
+
+

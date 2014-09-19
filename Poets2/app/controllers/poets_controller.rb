@@ -6,6 +6,7 @@ class PoetsController < ApplicationController
 
   	def show
   		@poet = Poet.find(params[:id])
+  		@edit = true
 	end
 
 	def new
@@ -16,9 +17,10 @@ class PoetsController < ApplicationController
 	  # render plain: params[:poet].inspect
 
 	  @poet = Poet.new(poet_params)
+	  @poet.user = current_user
 	  @poet.save
 	  redirect_to @poet
-	 #  	if @poet.save
+	 	#  	if @poet.save
 		# 	redirect_to poets_path
 		# else
 		# 	render 'new'
@@ -30,6 +32,7 @@ class PoetsController < ApplicationController
 
 	def edit
 		@poet = Poet.find(params[:id])
+		@edit = false
 	end
 
 
