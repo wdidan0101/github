@@ -1,0 +1,23 @@
+<section id="gameboard">
+    <div ng-repeat="row in board track by $index" class="row">
+        
+
+        <div ng-repeat="cell in row track by $index"
+             class="cell" 
+             ng-style="{'width':(100/size)+'%', 'height':(100/size)+'%'}" 
+             ng-class="{xmark: field == 'x', omark: field == 'o'}"  >
+            <div ng-show="cell == 'e'"
+                 ng-click="takeCell($parent.$index, $index)" 
+                {{ cell }}
+            </div>
+
+    <!-- leave the spot alone if it's already marked -->
+            <div ng-show="cell != 'e'" 
+                {{ cell }}
+            </div>
+        
+        </div>
+    
+
+    </div>
+</section>

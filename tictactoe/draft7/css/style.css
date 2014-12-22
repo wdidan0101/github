@@ -1,0 +1,144 @@
+
+
+html { 
+  background: url("../img/nebula.jpg") no-repeat center center fixed; 
+  background-size: cover;
+}
+
+h1 {
+	opacity: 0.6;
+	color: #ffffff;
+	text-align: center;
+	font-family: swfont,Garamond, serif;
+	font-weight: bold;
+	font-size: 40px;
+    margin: 0px 0px;
+}
+
+@font-face {
+    font-family: swfont;
+    src: url("font/Starjout.ttf");
+}
+
+input {
+  height: 50px;
+  width: 50px;
+}
+
+#gameboard {
+  margin-left: 50px;
+  margin-bottom: 40px;
+  height: 75%;
+}
+
+.gamestart {
+  width: 20%;
+  float: right;
+  margin-right: 50px;
+  clear: both;
+}
+
+.startbutton {
+  height: 50px;
+  width: 75px;
+}
+
+.reset {
+  width: 20%;
+  float: right;
+  margin-right: 50px;
+  clear: both;
+
+/*  width: 20%;
+  float: right;
+  margin-right: 50px;
+  margin-top: 25px;
+  clear: both;*/
+}
+
+.resetbutton {
+  height: 50px;
+  width: 75px;
+}
+
+.row {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.cell {
+/*  height: 95%;s
+  width: 95%;*/
+	display: inline-block;
+	font-size: 50px;
+  font-family: helvetica;
+  text-align: center;
+  border: 1px solid purple;
+}
+
+.xmark {
+  background-image: url("../img/skywalker.jpg");
+  background-size: 100% 100%;
+    
+  background-color: black;
+  color: white;
+}
+
+.omark {
+  background-image: url("../img/vader.jpg");
+  background-size: 100% 100%;
+    
+  background-color: white;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

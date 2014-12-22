@@ -1,0 +1,7 @@
+git checkout -b branch_name
+
+#switch back to master
+git checkout master
+
+#delete the branch again
+git branch -d <branch name>

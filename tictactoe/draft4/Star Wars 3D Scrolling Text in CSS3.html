@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" ><!--<![endif]-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:image" content="http://www.sitepoint.com/wp-content/themes/sitepoint/assets/images/icon.css.png">
+        
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="apple-touch-icon-precomposed" href="/wp-content/themes/sitepoint/assets/images/apple-touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/wp-content/themes/sitepoint/assets/images/apple-touch-icon-72x72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/wp-content/themes/sitepoint/assets/images/apple-touch-icon-114x114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/wp-content/themes/sitepoint/assets/images/apple-touch-icon-144x144-precomposed.png" />
+
+        <link href="https://plus.google.com/+sitepoint" rel="publisher" />
+        <meta property="twitter:account_id" content="15743570" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <script type="text/javascript">
+    function r(f){/in/.test(document.readyState)?setTimeout(r,9,f):f()}
+    </script>
+
+    
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30131-1', '.sitepoint.com');
+
+  ga('set', 'dimension1', 'post');
+ga('set', 'dimension2', 'CSS');
+ga('set', 'dimension3', 'CSS3');
+ga('set', 'dimension4', '2012-10-24');
+ga('set', 'dimension5', 'Craig Buckler');
+
+  ga('set', 'dimension7', 'test');
+  ga('send', 'pageview');
+</script>
+    <script type="text/javascript">
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function() {
+      var gads = document.createElement('script');
+      gads.async = true;
+      gads.type = 'text/javascript';
+      var useSSL = 'https:' == document.location.protocol;
+      gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+      var node = document.getElementsByTagName('script')[0];
+      node.parentNode.insertBefore(gads, node);
+      })();
+    </script>
+    
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.24 - http://yoast.com/wordpress/seo/ -->
+<title>Star Wars 3D Scrolling Text in CSS3</title>
+<link rel="canonical" href="http://www.sitepoint.com/css3-starwars-scrolling-text/" />
+<link rel="author" href="http://plus.google.com/+CraigBuckler"/>
+<link rel="publisher" href="https://plus.google.com/+sitepoint/"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Star Wars 3D Scrolling Text in CSS3" />
+<meta property="og:description" content="Craig demonstrates how you can implement the Star Wars scrolling title sequence using nothing but a little CSS3 magic. Perhaps it&#039;s pointless, but it looks amazing!" />
+<meta property="og:url" content="http://www.sitepoint.com/css3-starwars-scrolling-text/" />
+<meta property="og:site_name" content="SitePoint" />
+<meta property="article:publisher" content="https://www.facebook.com/sitepoint" />
+<meta property="article:author" content="http://www.facebook.com/craigbuckler" />
+<meta property="article:tag" content="animation" />
+<meta property="article:tag" content="CSS3" />
+<meta property="article:tag" content="HTML5 Dev Center" />
+<meta property="article:tag" content="HTML5 Tutorials &amp; Articles" />
+<meta property="article:tag" content="Star Wars" />
+<meta property="article:tag" content="transformations" />
+<meta property="article:section" content="Animation" />
+<meta property="article:section" content="CSS" />
+<meta property="article:section" content="CSS3" />
+<meta property="article:section" content="HTML" />
+<meta property="article:section" content="HTML5" />
+<meta property="article:published_time" content="2012-10-24T03:57:31+00:00" />
+<meta property="article:modified_time" content="2013-08-13T18:32:49+00:00" />
+<meta property="og:image" content="http://blogs.sitepointstatic.com/images/tech/742-css3-starwars-screen.png" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@sitepointdotcom"/>
+<meta name="twitter:domain" content="SitePoint"/>
+<meta name="twitter:creator" content="@craigbuckler"/>
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="SitePoint &raquo; Star Wars 3D Scrolling Text in CSS3 Comments Feed" href="http://www.sitepoint.com/css3-starwars-scrolling-text/feed/" />
+<link rel='stylesheet' id='sitepoint-fonts-css'  href='//fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700&#038;ver=3.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='sitepoint-styles-css'  href='//www.sitepoint.com/wp-content/themes/sitepoint/assets/stylesheets/styles-1b8ad0a8af84d007f34e92089e72c0b9.css?ver=3.9.2' type='text/css' media='all' />
+<script type='text/javascript' src='//www.sitepoint.com/wp-content/themes/sitepoint/assets/javascripts/scripts-head-e4a2be27db699092d2993e42901cedf6.js?ver=3.9.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.sitepoint.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.sitepoint.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9.2" />
+<link rel='shortlink' href='http://www.sitepoint.com/?p=59891' />
+
+<!--Plugin WP Missed Schedule 2013.1231.2013 Active - Tag 6707293c0218e2d8b7aa38d418ffa608-->
+
+<!-- This site is patched which an important unfixed problem since WordPress 2.5+ to 3.9+ -->
+
+<!-- wp-parsely Plugin Version 1.5 -->
+<meta name='wp-parsely_version' id='wp-parsely_version' content='1.5' />
+<meta name='parsely-page' id='parsely-page' content='{"title":"Star Wars 3D Scrolling Text in CSS3","link":"http:\/\/www.sitepoint.com\/css3-starwars-scrolling-text\/","image_url":null,"type":"post","post_id":"59891","pub_date":"2012-10-24T10:57:31Z","section":"CSS","author":"Craig Buckler","tags":["animation","css3","html5 dev center","html5 tutorials &amp; articles","star wars","transformations","css\/animation","css\/css3","html","html\/html5"]}' />
+<script type="text/javascript">
+    googletag.cmd.push(function() {
+		googletag.defineSlot("/7448792/SP2013_Articles_300x250_1", [300, 250], "div-gpt-ad-1392428092543-0").addService(googletag.pubads());
+		googletag.defineSlot("/7448792/SP2013_Articles_728x90_1", [728, 90], "div-gpt-ad-article-header").addService(googletag.pubads());
+		googletag.defineSlot("/7448792/SP2013_Articles_300x250_4", [300, 250], "div-gpt-ad-1392428092543-3").addService(googletag.pubads());
+		googletag.defineSlot("/7448792/SP2013_Articles_300x600_1", [300, 600], "div-gpt-ad-1392428092543-4").addService(googletag.pubads());
+		googletag.defineSlot("/7448792/Sitepoint_125x125_2", [125, 125], "div-gpt-ad-1400782268851-0").addService(googletag.pubads());
+		googletag.defineSlot("/7448792/Sitepoint_125x125_3", [125, 125], "div-gpt-ad-1400782991292-0").addService(googletag.pubads());
+		googletag.defineSlot("/7448792/Sitepoint_125x125_4", [125, 125], "div-gpt-ad-1400783440189-0").addService(googletag.pubads());
+		googletag.defineSlot("/7448792/Sitepoint_125x125_5", [125, 125], "div-gpt-ad-1400783664460-0").addService(googletag.pubads());
+		googletag.defineSlot("/7448792/Sitepoint_125x125_6", [125, 125], "div-gpt-ad-1400783847643-0").addService(googletag.pubads());
+		googletag.defineSlot("/7448792/Sitepoint_125x125", [125, 125], "div-gpt-ad-1400800012700-0").addService(googletag.pubads());
+		googletag.pubads().setTargeting("channel", "CSS");
+		googletag.pubads().setTargeting("post_id", "59891");
+		googletag.pubads().setTargeting("OpenX",["true", "false"]);
+		googletag.pubads().setTargeting("Tribal",["true", "false"]);
+		googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+    });
+</script>
+        <style type="text/css" id="syntaxhighlighteranchor"></style>
+    <!--[if lt IE 9]>
+      <script src="/wp-content/themes/sitepoint/assets/javascripts/vendor/respond.custom.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <header class="main-header" role="banner">
+      <nav class="top-bar" role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <div class="logo">
+              <a class="logomark" href="http://www.sitepoint.com" tabindex="1">
+                <img src="//www.sitepoint.com/wp-content/themes/sitepoint/assets/svg/sitepoint.svg" alt="SitePoint">
+              </a>
+            </div>
+          </li>
+          <li class="toggle-topbar menu-icon">
+            <a href="#"><span>Menu</span></a>
+          </li>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="has-dropdown">
+              <a href="#" tabindex="-1">Topics</a>
+              <ul class="dropdown">
+                <li>
+                  <a class="category-html menuitem" href="http://www.sitepoint.com/html/">HTML</a>
+                </li>
+                <li>
+                  <a class="category-css menuitem" href="http://www.sitepoint.com/css/">CSS</a>
+                </li>
+                <li>
+                  <a class="category-javascript menuitem" href="http://www.sitepoint.com/javascript/">JS</a>
+                </li>
+                <li>
+                  <a class="category-php menuitem" href="http://www.sitepoint.com/php/">PHP</a>
+                </li>
+                <li>
+                  <a class="category-ruby menuitem" href="http://www.sitepoint.com/ruby/">Ruby</a>
+                </li>
+                <li>
+                  <a class="category-mobile menuitem" href="http://www.sitepoint.com/mobile/">Mobile</a>
+                </li>
+                <li>
+                  <a class="category-ux menuitem" href="http://www.sitepoint.com/ux/">UX</a>
+                </li>
+                <li>
+                  <a class="category-design menuitem" href="http://www.sitepoint.com/design/">Design</a>
+                </li>
+                <li>
+                  <a class="category-design menuitem" href="/web-foundations/">Web Foundations</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://learnable.com/topics/all/book?utm_source=sitepoint&utm_medium=link&utm_content=top-nav" target="_blank" tabindex="2">Books</a>
+            </li>
+            <li>
+              <a href="https://learnable.com/topics/all/course?utm_source=sitepoint&utm_medium=link&utm_content=top-nav" target="_blank" tabindex="3">Courses</a>
+            </li>
+<!--             <li>
+              <a href="/store/" tabindex="2">Store</a>
+            </li>
+ -->            <li>
+              <a href="/forums/" tabindex="4">Forums</a>
+            </li>
+            <li>
+              <a href="/newsletter" tabindex="5">Subscribe</a>
+            </li>
+            <li class="top-bar_search">
+              <form method="get" action="http://www.sitepoint.com/">
+                <input autocomplete="off" class="searchquery" id="search-box" name="s" placeholder="Search&hellip;" type="text" tabindex="4">
+                <button tabindex="-1"></button>
+              </form>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </header>
+<div class="awesome-bar awesome-bar--default" data-campaign="newrelic" style="background:#038D98;">
+  <a class="awesome-bar_container" target="_blank" href="" id="bar-new-relic-link-1">
+    <img class="awesome-bar_brand" src="http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2013/09/NewRelic-logo-w.png" alt="New Relic" style="height:22px;">
+    <span class="awesome-bar_message" style="color:#fff;" id="bar-new-relic-message-1"></span>
+    <span class="button small radius awesome-bar_action" style="background:#78cbd1;" id="bar-new-relic-button-1"></span>
+  </a>
+  <span class="awesome-bar_close">x</span>
+</div>
+<script>
+(function(){
+var rand = Math.random();
+var link  = document.getElementById("bar-new-relic-link-1");
+var message  = document.getElementById("bar-new-relic-message-1");
+var button  = document.getElementById("bar-new-relic-button-1");
+if (rand < 0.25) {
+ link.href = "http://newrelic.com/sp/datanerd?utm_source=SITE&utm_medium=text_ad&utm_content=swlove&utm_campaign=datanerd&mpc=TA-SITE-generic-EN-Signup-datanerd-swlove"
+ message.innerHTML = "Make your software run better, and look better (with a free nerdiffic t-shirt!) in the process.";
+ button.innerHTML = "Yes, please";
+} else if (rand < 0.5) {
+ link.href = "http://newrelic.com/sp/datanerd?utm_source=SITE&utm_medium=text_ad&utm_content=LookGood&utm_campaign=DataNerd&mpc=TA-SITE-generic-EN-Signup-DataNerd-LookGood";
+ message.innerHTML = "When your software looks good, you do too. Deploy New Relic and see for yourself.";
+ button.innerHTML = "Free t-shirt, please!";
+} else if (rand < 0.75) {
+ link.href = "http://newrelic.com/sp/datanerd?utm_source=SITE&utm_medium=text_ad&utm_content=Sweat&utm_campaign=DataNerd&mpc=TA-SITE-generic-EN-Signup-DataNerd-Sweat";
+ message.innerHTML = "Improve your app and get a free t-shirt. We get it, coding is sweaty business.";
+ button.innerHTML = "Show me how";
+} else {
+ link.href = "http://newrelic.com/sp/datanerd?utm_source=SITE&utm_medium=text_ad&utm_content=LookGood&utm_campaign=DataNerd&mpc=TA-SITE-generic-EN-Signup-DataNerd-LookGood"
+ message.innerHTML = "Give your software the love it needs. And we'll give you the new t-shirt you need.";
+ button.innerHTML = "Create free account";
+}
+})()
+</script><div class="awesome-bar awesome-bar--alternative" data-campaign="newrelic" style="background:#038D98;">
+  <a class="awesome-bar_container" target="_blank" href="" id="bar-new-relic-link-2">
+    <img class="awesome-bar_brand" src="http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2013/09/NewRelic-logo-w.png" alt="New Relic" style="height:22px;">
+    <span class="awesome-bar_message" style="color:#fff;" id="bar-new-relic-message-2"></span>
+    <span class="button small radius awesome-bar_action" style="background:#78cbd1;" id="bar-new-relic-button-2"></span>
+  </a>
+  <span class="awesome-bar_close">x</span>
+</div>
+<script>
+(function(){
+var rand = Math.random();
+var link  = document.getElementById("bar-new-relic-link-2");
+var message  = document.getElementById("bar-new-relic-message-2");
+var button  = document.getElementById("bar-new-relic-button-2");
+if (rand < 0.25) {
+ link.href = "http://newrelic.com/sp/datanerd?utm_source=SITE&utm_medium=text_ad&utm_content=swlove&utm_campaign=datanerd&mpc=TA-SITE-generic-EN-Signup-datanerd-swlove"
+ message.innerHTML = "Make your software run better, and look better (with a free nerdiffic t-shirt!) in the process.";
+ button.innerHTML = "Yes, please";
+} else if (rand < 0.5) {
+ link.href = "http://newrelic.com/sp/datanerd?utm_source=SITE&utm_medium=text_ad&utm_content=LookGood&utm_campaign=DataNerd&mpc=TA-SITE-generic-EN-Signup-DataNerd-LookGood";
+ message.innerHTML = "When your software looks good, you do too. Deploy New Relic and see for yourself.";
+ button.innerHTML = "Free t-shirt, please!";
+} else if (rand < 0.75) {
+ link.href = "http://newrelic.com/sp/datanerd?utm_source=SITE&utm_medium=text_ad&utm_content=Sweat&utm_campaign=DataNerd&mpc=TA-SITE-generic-EN-Signup-DataNerd-Sweat";
+ message.innerHTML = "Improve your app and get a free t-shirt. We get it, coding is sweaty business.";
+ button.innerHTML = "Show me how";
+} else {
+ link.href = "http://newrelic.com/sp/datanerd?utm_source=SITE&utm_medium=text_ad&utm_content=LookGood&utm_campaign=DataNerd&mpc=TA-SITE-generic-EN-Signup-DataNerd-LookGood"
+ message.innerHTML = "Give your software the love it needs. And we'll give you the new t-shirt you need.";
+ button.innerHTML = "Create free account";
+}
+})()
+</script><main role="main" class="page page--primary category-css">
+
+  <header role="banner" class="page_banner page_banner--category">
+    <h2 class="page_banner_title">
+      <a href="http://www.sitepoint.com/css/" class="page_banner_title_category"><i class="icon-category"></i>CSS</a>
+              <a href="http://www.sitepoint.com/css/css3/" class="page_banner_title_sub-category">CSS3</a>
+          </h2>
+    <div class="page_banner_adspot">
+      <div class="widget maestro maestro-content-type-ad hide-for-mobile-SP" id="maestro-product-37"><!-- SP2013_Articles_728x90_1 -->
+<div id="div-gpt-ad-article-header" style="width:728px; height:90px;" class="adspot">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("div-gpt-ad-article-header"); });</script>
+ </div></div>          </div>
+
+    <div class="page_banner_divider-container">
+      <hr/>
+    </div>
+  </header>
+
+      <div class="page_content">
+      <article class="article" id="post-59891">
+        <header class="article_header">
+          <h1 class="article_title">Star Wars 3D Scrolling Text in CSS3</h1>
+
+          
+    <div class="contributor article_contributor">
+
+          <figure class="contributor_avatar">
+      <a href="http://www.sitepoint.com/author/craig-buckler/">
+        <img alt='' src='http://0.gravatar.com/avatar/439aeaff7de2bae365adc3eb4947b44d?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />      </a>
+    </figure>
+  
+      <div class="contributor_details">
+          <div class="contributor_name">
+    <a href="http://www.sitepoint.com/author/craig-buckler/">Craig Buckler</a>
+  </div>
+
+        </div>
+
+    </div>
+
+    
+          <div class="article_meta-data">
+            <p class="article_pub-date">Published <time datetime="2012-10-24" pubdate>October 24, 2012</time></p>
+          </div>
+          <div class="article_header__buttons">
+            
+            <!-- make sure to update trackTweetsAndSubscriptions in scripts.js if the Tweet button DOM path changes in the future -->
+            <a class="button small transparent radius twitter-share-button" target="_blank" href="https://twitter.com/share?text=Star+Wars+3D+Scrolling+Text+in+CSS3&via=sitepointdotcom">
+              <i class="icon-twitter"></i>
+              Tweet
+            </a>
+            
+            <!-- make sure to update trackTweetsAndSubscriptions in scripts.js if the Subscribe button DOM path changes in the future -->
+            <a class="button small transparent radius subscribe-button" target="_blank" href="https://confirmsubscription.com/h/y/1FD5B523FA48AA2B">
+              <!--<i class="icon-envelope-alt"></i>-->
+              Subscribe
+            </a>
+            
+          </div>
+
+        </header>
+
+        <section class="article_body">
+
+            <p>I always try to offer practical tips on SitePoint. Really. This isn&#8217;t one, but I couldn&#8217;t resist it. Without further ado&hellip;</p>
+<p style="text-align:center"><a href="http://blogs.sitepointstatic.com/examples/tech/css3-starwars/index.html"><img src="http://blogs.sitepointstatic.com/images/tech/742-css3-starwars-screen.png" width="400" height="172" alt="Star Wars 3D scrolling title text" class="center" style="margin:0 auto" /><strong>View Star Wars 3D Scrolling Text in CSS3</strong><br />(Chrome, Safari or Firefox)</a></p>
+<p>How cool is that? No JavaScript, no graphics &#8212; just pure HTML5 text and CSS3. It works in Chrome, Safari and Firefox. Opera won&#8217;t show the 3D transform in the current release, but it&#8217;ll work. Internet Explorer. Hmmm. Sorry, but you&#8217;ll need to wait for IE10 since previous versions don&#8217;t support transformations and animations.</p>
+<p>The effect is remarkably easy to implement. The HTML requires an outer element (#titles) and a section which will be scrolled (#titlecontent):</p>
+<pre><code>
+&lt;div id=&quot;titles&quot;&gt;&lt;div id=&quot;titlecontent&quot;&gt;
+
+	&lt;p&gt;content&lt;/p&gt;
+
+&lt;/div&gt;&lt;/div&gt;
+</code></pre>
+<p>The outer <code>DIV</code> is positioned at the bottom center of the browser window then rotated using 3D perspective using a transform (note that vendor prefixes have been omitted here, but they&#8217;re in the actual code):</p>
+<pre><code>
+#titles
+{
+	position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 350%;
+	font-weight: bold;
+	text-align: justify;
+	overflow: hidden;
+	transform-origin: 50% 100%;
+	transform: perspective(300px) rotateX(25deg);
+}
+</code></pre>
+<p>A pseudo-element is applied to overlay a fade-out gradient at the top of the outer <code>DIV</code>:</p>
+<pre><code>
+#titles:after
+{
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+</code></pre>
+<p>Then all we need do is scroll the content using CSS animation:</p>
+<pre><code>
+#titlecontent
+{
+	position: absolute;
+	top: 100%;
+	animation: scroll 100s linear 4s infinite;
+}
+
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+</code></pre>
+<p><em>(Note you could also use margin-top instead of absolutely-positioning the content, but it didn&#8217;t seem as smooth.)</em></p>
+<p><a href="http://blogs.sitepointstatic.com/examples/tech/css3-starwars/index.html"><strong>View the demonstration again&hellip;</strong></a></p>
+<p>That&#8217;s all there is to it. If you want to delve further: view the source, Luke.</p>
+<p>Please use the code as you wish, but I hope this article doesn&#8217;t lead to the re-introduction of pointless Star Wars-inspired splash pages!</p>
+<p>If you enjoyed reading this post, you&#8217;ll love <a href="https://learnable.com/">Learnable</a>; the place to learn fresh skills and techniques from the masters. Members get instant access to all of SitePoint&#8217;s ebooks and interactive online courses, like <a href="https://learnable.com/courses/learn-css3-203">Learn CSS3</a>.</p>
+
+        </section>
+
+        <div class="article__author-bios">
+          
+    <div class="contributor contributor--large">
+
+          <figure class="contributor_avatar">
+      <a href="http://www.sitepoint.com/author/craig-buckler/">
+        <img alt='' src='http://0.gravatar.com/avatar/439aeaff7de2bae365adc3eb4947b44d?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />      </a>
+    </figure>
+  
+      <div class="contributor_details">
+
+          <div class="contributor_name">
+    <a href="http://www.sitepoint.com/author/craig-buckler/">Craig Buckler</a>
+  </div>
+
+  
+        <p class="contributor_longdesc">Craig is a Director of <a href="http://optimalworks.net">OptimalWorks Ltd</a>, a UK consultancy dedicated to building award-winning websites implementing standards,
+accessibility, SEO, and best-practice techniques.</p>
+
+        <ul class="contributor_social">
+          <li><a href="https://twitter.com/craigbuckler" target="_blank"><i class="icon-twitter"></i></a></li><li><a href="http://www.facebook.com/craigbuckler" target="_blank"><i class="icon-facebook"></i></a></li><li><a href="https://github.com/craigbuckler" target="_blank"><i class="icon-github"></i></a></li><li><a href="http://www.linkedin.com/in/craigbuckler" target="_blank"><i class="icon-linkedin"></i></a></li><li><a href="http://plus.google.com/+CraigBuckler" target="_blank"><i class="icon-google-plus"></i></a></li>        </ul>
+      </div>
+    </div>
+
+          </div>
+
+                  <div class="related-content">
+            <h2>You might also like:</h2>
+            <ul class="article-list article-list--related">
+              <li class="article-list_item  tile post-tile">
+  <article class="article article--micro article--micro--related category-css " data-disqus-id="http://www.sitepoint.com/9-reasons-should-using-codepen/">
+    <header class="article_category"><h2 class="article_category_title"><a href="http://www.sitepoint.com/css/">CSS</a></h2></header>
+    
+    <section class="article_header">
+      <h1 class="article_title"><a href="http://www.sitepoint.com/9-reasons-should-using-codepen/">9 Reasons You Should Be Using CodePen</a></h1>
+      <div class="contributor article_contributor">
+        <p class="contributor_name article_author-name">by <a href="http://www.sitepoint.com/author/tstrong/">Ty Strong</a></p>
+      </div>
+      
+      <div class="article_meta-data"><p class="article_pub-date"><time datetime="2014-08-21 11:00:28" pubdate>Aug 21, 2014</time></p></div>
+      </section>
+  </article>
+</li>              <div class="widget maestro maestro-content-type-html " id="maestro-product-12"><li class="article-list_item  tile post-tile">
+  <article class="article article--micro article--micro--related category-web">
+    <header class="article_category"><h2 class="article_category_title"><a href="https://learnable.com?utm_source=sitepoint&utm_medium=related-items&utm_content=css-troubleshooting">Learnable</a></h2></header>
+    <section class="article_header">
+      <h1 class="article_title"><a href="https://learnable.com/courses/css-troubleshooting-in-six-easy-steps-2869?utm_source=sitepoint&utm_medium=related-items&utm_content=css-troubleshooting">Course: CSS Troubleshooting in Six Easy Steps</a></h1>
+      <div class="contributor article_contributor">
+        <p class="contributor_name article_author-name">by <a href="https://www.sitepoint.com/author/russweakley/">Russ Weakley</a></p>
+      </div>
+      <div class="article_meta-data"><p class="article_pub-date">PREMIUM</p></div>
+    </section>
+  </article>
+</li></div>              <li class="article-list_item  tile post-tile">
+  <article class="article article--micro article--micro--related category-javascript " data-disqus-id="http://www.sitepoint.com/creating-css-animations-using-move-js/">
+    <header class="article_category"><h2 class="article_category_title"><a href="http://www.sitepoint.com/javascript/">JavaScript</a></h2></header>
+    
+    <section class="article_header">
+      <h1 class="article_title"><a href="http://www.sitepoint.com/creating-css-animations-using-move-js/">Creating CSS Animations Using Move.js</a></h1>
+      <div class="contributor article_contributor">
+        <p class="contributor_name article_author-name">by <a href="http://www.sitepoint.com/author/sfrahman/">Syed Fazle Rahman</a></p>
+      </div>
+      
+      <div class="article_meta-data"><p class="article_pub-date"><time datetime="2014-03-20 10:00:00" pubdate>Mar 20, 2014</time></p></div>
+      </section>
+  </article>
+</li>          </ul>
+        </div>
+        
+        <div class="promo-panel">
+          <div class="widget maestro maestro-content-type-product " id="maestro-product-29"><div class="promo-panel_media-object"><img src="https://d2sis3lil8ndrq.cloudfront.net/books/jshtml-basics1_medium_3d.png" /></div>
+<div class="promo-panel_content">
+  <h1 class="promo-panel_title">
+    Free book: Jump Start HTML5 Basics
+  </h1>
+  <p>Grab a free copy of one our latest ebooks! Packed with hints and tips on HTML5's most powerful new features.</p>
+  <form class="promo-panel_action"><input type="email" name="email" class="promo-panel_email" placeholder="email address" /><input type="hidden" name="content" value="29" /><button class="button radius">Claim Book</button></form>
+</div></div>        </div>
+
+                
+        <a id="comments"></a>
+        
+<div id="disqus_thread">
+                    <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-88302">
+        <div id="dsq-comment-header-88302" class="dsq-comment-header">
+            <cite id="dsq-cite-88302">
+http://r.je                <span id="dsq-author-user-88302">Tom B</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88302" class="dsq-comment-body">
+            <div id="dsq-comment-message-88302" class="dsq-comment-message"><p>Great effect but it seems to be broken in chrome. The text goes totally along the wrong vector.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-2" id="dsq-comment-88307">
+        <div id="dsq-comment-header-88307" class="dsq-comment-header">
+            <cite id="dsq-cite-88307">
+http://www.optimalworks.net/                <span id="dsq-author-user-88307">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88307" class="dsq-comment-body">
+            <div id="dsq-comment-message-88307" class="dsq-comment-message"><p>Which version of Chrome are you using? It certainly works in v22 on Windows.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-3" id="dsq-comment-88313">
+        <div id="dsq-comment-header-88313" class="dsq-comment-header">
+            <cite id="dsq-cite-88313">
+http://r.je                <span id="dsq-author-user-88313">Tom B</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88313" class="dsq-comment-body">
+            <div id="dsq-comment-message-88313" class="dsq-comment-message"><p>Ah, I forgot that I&#8217;m on the beta channel, perhaps that has something to do with it. I&#8217;m on 23.0.1271.40 beta-m.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-88303">
+        <div id="dsq-comment-header-88303" class="dsq-comment-header">
+            <cite id="dsq-cite-88303">
+                <span id="dsq-author-user-88303">amin</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88303" class="dsq-comment-body">
+            <div id="dsq-comment-message-88303" class="dsq-comment-message"><p>this code doesn&#8217;t  work on ie even 9 and chrome</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-aderosa even depth-2" id="dsq-comment-88305">
+        <div id="dsq-comment-header-88305" class="dsq-comment-header">
+            <cite id="dsq-cite-88305">
+http://www.audero.it/                <span id="dsq-author-user-88305">Aurelio De Rosa</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88305" class="dsq-comment-body">
+            <div id="dsq-comment-message-88305" class="dsq-comment-message"><p>I&#8217;m using Chrome and it works like a charm.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-2" id="dsq-comment-88308">
+        <div id="dsq-comment-header-88308" class="dsq-comment-header">
+            <cite id="dsq-cite-88308">
+http://www.optimalworks.net/                <span id="dsq-author-user-88308">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88308" class="dsq-comment-body">
+            <div id="dsq-comment-message-88308" class="dsq-comment-message"><p>I mentioned that it won&#8217;t work in IE9. It should be fine in recent versions of Chrome, though.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even depth-2" id="dsq-comment-88315">
+        <div id="dsq-comment-header-88315" class="dsq-comment-header">
+            <cite id="dsq-cite-88315">
+                <span id="dsq-author-user-88315">Andy</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88315" class="dsq-comment-body">
+            <div id="dsq-comment-message-88315" class="dsq-comment-message"><p>Of course it doesn&#8217;t work in IE9. Microsoft creates inferior browsers and despite the commercial&#8217;s claims of it being awesome and up-to-date, it&#8217;s not. Still behind Chrome &amp; Firefox.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-88304">
+        <div id="dsq-comment-header-88304" class="dsq-comment-header">
+            <cite id="dsq-cite-88304">
+http://corbacho.info                <span id="dsq-author-user-88304">David Corbacho</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88304" class="dsq-comment-body">
+            <div id="dsq-comment-message-88304" class="dsq-comment-message"><p>haha! I love it!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-88306">
+        <div id="dsq-comment-header-88306" class="dsq-comment-header">
+            <cite id="dsq-cite-88306">
+                <span id="dsq-author-user-88306">Jeroen</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88306" class="dsq-comment-body">
+            <div id="dsq-comment-message-88306" class="dsq-comment-message"><p>@Darth Craig. Nice!<br />
+It does work for me in Chrome and in FF. In FF with a bit of a stutter btw. Also an amazing CPU load for something with no actual use.<br />
+Always good to know that the people at sitepoint are pushing the boundries (to a galaxy far, far away)</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-2" id="dsq-comment-88309">
+        <div id="dsq-comment-header-88309" class="dsq-comment-header">
+            <cite id="dsq-cite-88309">
+http://www.optimalworks.net/                <span id="dsq-author-user-88309">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88309" class="dsq-comment-body">
+            <div id="dsq-comment-message-88309" class="dsq-comment-message"><p>Thanks Jeroen!</p>
+<p>Try clearing the browser history and cache in Firefox. It seems fine on a 3 year-old Windows 7 laptop but I did notice stuttering if it was left going for a few minutes.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-88310">
+        <div id="dsq-comment-header-88310" class="dsq-comment-header">
+            <cite id="dsq-cite-88310">
+http://www.andrewsylvester.com                <span id="dsq-author-user-88310">Andrew Sylvester</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88310" class="dsq-comment-body">
+            <div id="dsq-comment-message-88310" class="dsq-comment-message"><p>I&#8217;m using Chrome version 22.0.1229.94 m (which is apparently &#8220;up to date,&#8221; according to the about menu) on Windows 7, and I&#8217;m not seeing the scrolling text, either.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-2" id="dsq-comment-88311">
+        <div id="dsq-comment-header-88311" class="dsq-comment-header">
+            <cite id="dsq-cite-88311">
+http://www.optimalworks.net/                <span id="dsq-author-user-88311">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88311" class="dsq-comment-body">
+            <div id="dsq-comment-message-88311" class="dsq-comment-message"><p>That&#8217;s the version I&#8217;m using. I suppose an extension could cause the problem? Or perhaps it&#8217;s a graphics card issue? Do CSS3 animations fail elsewhere?</p>
+<p>You could try re-installing. Alternatively, try it in Firefox?</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-3" id="dsq-comment-88312">
+        <div id="dsq-comment-header-88312" class="dsq-comment-header">
+            <cite id="dsq-cite-88312">
+http://www.andrewsylvester.com                <span id="dsq-author-user-88312">Andrew Sylvester</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88312" class="dsq-comment-body">
+            <div id="dsq-comment-message-88312" class="dsq-comment-message"><p>Hi Craig,</p>
+<p>Opened the demo up in Firefox and it worked fine! Tried again in Chrome with all my extensions disabled, but no luck. Very odd&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-88314">
+        <div id="dsq-comment-header-88314" class="dsq-comment-header">
+            <cite id="dsq-cite-88314">
+http://rickerg.com/                <span id="dsq-author-user-88314">greg</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88314" class="dsq-comment-body">
+            <div id="dsq-comment-message-88314" class="dsq-comment-message"><p>It works in both Chrome(v22) and FF on my Windows 7 system. It doesn&#8217;t work on IE 9</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-88316">
+        <div id="dsq-comment-header-88316" class="dsq-comment-header">
+            <cite id="dsq-cite-88316">
+http://codeflow.org/                <span id="dsq-author-user-88316">Florian</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88316" class="dsq-comment-body">
+            <div id="dsq-comment-message-88316" class="dsq-comment-message"><p>The Aliasing, it gives me eye cancer.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-2" id="dsq-comment-88318">
+        <div id="dsq-comment-header-88318" class="dsq-comment-header">
+            <cite id="dsq-cite-88318">
+http://www.optimalworks.net/                <span id="dsq-author-user-88318">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88318" class="dsq-comment-body">
+            <div id="dsq-comment-message-88318" class="dsq-comment-message"><p>Most effects are far better if you shut your eyes&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-88317">
+        <div id="dsq-comment-header-88317" class="dsq-comment-header">
+            <cite id="dsq-cite-88317">
+http://muzso.hu/                <span id="dsq-author-user-88317">müzso</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88317" class="dsq-comment-body">
+            <div id="dsq-comment-message-88317" class="dsq-comment-message"><p>Works in Firefox 16.0.1, but not in Chrome 22 (or 24 if I switch to the dev channel). In Chrome I get the &#8220;Star Wars titles in CSS3&#8243; text, but not the scrolling text after that. I used a quite old setup running Windows XP (SP3) with an ATI X1250 (integrated) GPU. I guess the latter could be responsible for the failure. Maybe Chrome&#8217;s 3D transformations depend on some GPU features? :-o</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-2" id="dsq-comment-88319">
+        <div id="dsq-comment-header-88319" class="dsq-comment-header">
+            <cite id="dsq-cite-88319">
+http://www.optimalworks.net/                <span id="dsq-author-user-88319">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88319" class="dsq-comment-body">
+            <div id="dsq-comment-message-88319" class="dsq-comment-message"><p>I&#8217;m beginning to wonder if Google have restricted certain effects on some graphics cards. I think they do for WebGL, but this is CSS3 transforms &#8212; it should work regardless?</p>
+<p>Despite its popularity, I do find Chrome a little quirky at times.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-3" id="dsq-comment-88320">
+        <div id="dsq-comment-header-88320" class="dsq-comment-header">
+            <cite id="dsq-cite-88320">
+http://westendorp.name                <span id="dsq-author-user-88320">Peter Westendorp</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88320" class="dsq-comment-body">
+            <div id="dsq-comment-message-88320" class="dsq-comment-message"><p>3D Transforms are hardware accelerated, and Chrome has some GPU/OS/Browser combinations blacklisted because caused issues. (<a href="https://code.google.com/p/chromium/issues/detail?id=146250&#038;thanks=146250&#038;ts=1346676221" rel="nofollow">https://code.google.com/p/chromium/issues/detail?id=146250&#038;thanks=146250&#038;ts=1346676221</a>)</p>
+<p>You can go to chrome://gpu to check if your setup has 3D transforms enabled&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-3" id="dsq-comment-88321">
+        <div id="dsq-comment-header-88321" class="dsq-comment-header">
+            <cite id="dsq-cite-88321">
+http://www.optimalworks.net/                <span id="dsq-author-user-88321">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88321" class="dsq-comment-body">
+            <div id="dsq-comment-message-88321" class="dsq-comment-message"><p>That explains it &#8212; thanks, Peter.</p>
+<p>It seems people are not be experiencing all browser effects as we expect them too. Haven&#8217;t web developers got enough hassle to contend with!</p>
+<p>Interestingly, I have 3D CSS as &#8220;Hardware accelerated&#8221;, but CSS Animation as just &#8220;Accelerated&#8221;. Not sure what the difference is?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even depth-3" id="dsq-comment-88340">
+        <div id="dsq-comment-header-88340" class="dsq-comment-header">
+            <cite id="dsq-cite-88340">
+http://www.westendorp.name                <span id="dsq-author-user-88340">Peter Westendorp</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88340" class="dsq-comment-body">
+            <div id="dsq-comment-message-88340" class="dsq-comment-message"><p>&#8216;Normal&#8217; CSS animations aren&#8217;t hardware accelerated, but you can trick the browser into hardware acceleration by setting an &#8216;empty&#8217; 3D transform e.g. translateZ(0). (<a href="http://www.youtube.com/watch?v=IKl78ZgJzm4" rel="nofollow">http://www.youtube.com/watch?v=IKl78ZgJzm4</a>)</p>
+<p>No idea why they specifically show CSS animations as &#8216;Accelerated&#8217; though.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-88322">
+        <div id="dsq-comment-header-88322" class="dsq-comment-header">
+            <cite id="dsq-cite-88322">
+                <span id="dsq-author-user-88322">Anonymous</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88322" class="dsq-comment-body">
+            <div id="dsq-comment-message-88322" class="dsq-comment-message"><p>At the very end, as the text moves off to the horizon, please add &#8220;If you can read this you don&#8217;t need glasses&#8221; that would make my day lol Nice work!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-88323">
+        <div id="dsq-comment-header-88323" class="dsq-comment-header">
+            <cite id="dsq-cite-88323">
+http://isotrope.net                <span id="dsq-author-user-88323">Michal</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88323" class="dsq-comment-body">
+            <div id="dsq-comment-message-88323" class="dsq-comment-message"><p>Aliasing in Firefox is so terrible (on Windows)<br />
+Nice and smooth in Chrome.<br />
+<a href="http://i.imgur.com/7rB2N.jpg" rel="nofollow">http://i.imgur.com/7rB2N.jpg</a></p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-2" id="dsq-comment-88324">
+        <div id="dsq-comment-header-88324" class="dsq-comment-header">
+            <cite id="dsq-cite-88324">
+http://www.optimalworks.net/                <span id="dsq-author-user-88324">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88324" class="dsq-comment-body">
+            <div id="dsq-comment-message-88324" class="dsq-comment-message"><p>Ughh. My installation doesn&#8217;t look that bad &#8211; I suspect it depends on your graphics card. Some are reporting that Chrome doesn&#8217;t work too.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-3" id="dsq-comment-88328">
+        <div id="dsq-comment-header-88328" class="dsq-comment-header">
+            <cite id="dsq-cite-88328">
+http://isotrope.net                <span id="dsq-author-user-88328">Michal</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88328" class="dsq-comment-body">
+            <div id="dsq-comment-message-88328" class="dsq-comment-message"><p>I did forget one important thing: Thanks! for the demo. It was reading your process. Cheers!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-88325">
+        <div id="dsq-comment-header-88325" class="dsq-comment-header">
+            <cite id="dsq-cite-88325">
+http://Opensourcehacker.com                <span id="dsq-author-user-88325">Mikko Ohtamaa</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88325" class="dsq-comment-body">
+            <div id="dsq-comment-message-88325" class="dsq-comment-message"><p>You get nice extra tearing effect on iPad 2 + iOS 5 :(</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-88326">
+        <div id="dsq-comment-header-88326" class="dsq-comment-header">
+            <cite id="dsq-cite-88326">
+http://Thecoolkidstable.net                <span id="dsq-author-user-88326">Luis Acevedo</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88326" class="dsq-comment-body">
+            <div id="dsq-comment-message-88326" class="dsq-comment-message"><p>That was really, really good.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-2" id="dsq-comment-88327">
+        <div id="dsq-comment-header-88327" class="dsq-comment-header">
+            <cite id="dsq-cite-88327">
+http://www.optimalworks.net/                <span id="dsq-author-user-88327">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88327" class="dsq-comment-body">
+            <div id="dsq-comment-message-88327" class="dsq-comment-message"><p>Cheers Luis!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-88329">
+        <div id="dsq-comment-header-88329" class="dsq-comment-header">
+            <cite id="dsq-cite-88329">
+http://www.corentin-hatte.eu/                <span id="dsq-author-user-88329">viki53</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88329" class="dsq-comment-body">
+            <div id="dsq-comment-message-88329" class="dsq-comment-message"><p>Nice job, but what&#8217;s new in copying something that has already been done in 2009?<br />
+<a href="http://ajaxian.com/archives/star-wars-html-and-css-a-new-hope" rel="nofollow">http://ajaxian.com/archives/star-wars-html-and-css-a-new-hope</a></p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-2" id="dsq-comment-88330">
+        <div id="dsq-comment-header-88330" class="dsq-comment-header">
+            <cite id="dsq-cite-88330">
+http://www.optimalworks.net/                <span id="dsq-author-user-88330">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88330" class="dsq-comment-body">
+            <div id="dsq-comment-message-88330" class="dsq-comment-message"><p>Nothing is original, is it!</p>
+<p>That is a very good facsimile of the title sequence. It even uses hard spaces to ensure the scrolling text looks similar. Interestingly, it takes a different approach and transforms the titles through 3D space rather than sliding them on a 3D background like mine does.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-88331">
+        <div id="dsq-comment-header-88331" class="dsq-comment-header">
+            <cite id="dsq-cite-88331">
+                <span id="dsq-author-user-88331">Jenn</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88331" class="dsq-comment-body">
+            <div id="dsq-comment-message-88331" class="dsq-comment-message"><p>Its works great in Firefox on my OS X install, but all other browsers (safari, Opera, Chrome) (latest stable/auto-updated versions) are not working.similar to above  It does no show the long scrolling text properly but the star wars title shows up.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-craig-buckler bypostauthor odd alt depth-2" id="dsq-comment-88337">
+        <div id="dsq-comment-header-88337" class="dsq-comment-header">
+            <cite id="dsq-cite-88337">
+http://www.optimalworks.net/                <span id="dsq-author-user-88337">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88337" class="dsq-comment-body">
+            <div id="dsq-comment-message-88337" class="dsq-comment-message"><p>That&#8217;s odd. I&#8217;d have thought Safari would have worked at least. I think it&#8217;s a lesson for us all though &#8212; don&#8217;t rely on modern CSS3 effects without a fallback!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-88332">
+        <div id="dsq-comment-header-88332" class="dsq-comment-header">
+            <cite id="dsq-cite-88332">
+                <span id="dsq-author-user-88332">Christian</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88332" class="dsq-comment-body">
+            <div id="dsq-comment-message-88332" class="dsq-comment-message"><p>Works great for me. I do use Chrome sometimes but to me it&#8217;s not the panacea so many people make it out to be.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-88333">
+        <div id="dsq-comment-header-88333" class="dsq-comment-header">
+            <cite id="dsq-cite-88333">
+http://donaven.com                <span id="dsq-author-user-88333">donaven</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88333" class="dsq-comment-body">
+            <div id="dsq-comment-message-88333" class="dsq-comment-message"><p>Epic!  Will use this in a presentation within Keynote soon. :)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-88334">
+        <div id="dsq-comment-header-88334" class="dsq-comment-header">
+            <cite id="dsq-cite-88334">
+http://alia2net.com/                <span id="dsq-author-user-88334">Michael</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88334" class="dsq-comment-body">
+            <div id="dsq-comment-message-88334" class="dsq-comment-message"><p>Thanks Craig. Didn&#8217;t seen this one before. I&#8217;m going to play around a bit ;)</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-88335">
+        <div id="dsq-comment-header-88335" class="dsq-comment-header">
+            <cite id="dsq-cite-88335">
+http://www.shoffle.com/Cillies/root/en/StaRSS/Main/make?anyway=1&#038;url=http%3A%2F%2Ffivethirtyeight.blogs.nytimes.com&#038;mood=DUELLING&#038;colour=3f0                <span id="dsq-author-user-88335">kyle</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88335" class="dsq-comment-body">
+            <div id="dsq-comment-message-88335" class="dsq-comment-message"><p>Hey!  This is awesome.   Ages ago, I made a JS-based site that did this.  Your solution is much better now that more browsers support this stuff and the 3d transforms are compatible.</p>
+<p>Here&#8217;s an example&#8230; it pulls the text from a political blog (but you can use any website):</p>
+<p><a href="http://www.shoffle.com/Cillies/root/en/StaRSS/Main/make?anyway=1&#038;url=http%3A%2F%2Ffivethirtyeight.blogs.nytimes.com&#038;mood=DUELLING&#038;colour=3f0" rel="nofollow">http://www.shoffle.com/Cillies/root/en/StaRSS/Main/make?anyway=1&#038;url=http%3A%2F%2Ffivethirtyeight.blogs.nytimes.com&#038;mood=DUELLING&#038;colour=3f0</a></p>
+<p>Do you mind if I freshen my &#8220;galactifier&#8221; up with your CSS/HTML? (with credit of course)</p>
+<p>Cheers</p>
+<p>Kyle</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment byuser comment-author-craig-buckler bypostauthor even depth-2" id="dsq-comment-88336">
+        <div id="dsq-comment-header-88336" class="dsq-comment-header">
+            <cite id="dsq-cite-88336">
+http://www.optimalworks.net/                <span id="dsq-author-user-88336">Craig Buckler</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88336" class="dsq-comment-body">
+            <div id="dsq-comment-message-88336" class="dsq-comment-message"><p>That&#8217;s very clever. Help yourself to the code, though &#8212; that&#8217;s what it&#8217;s there for!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-88338">
+        <div id="dsq-comment-header-88338" class="dsq-comment-header">
+            <cite id="dsq-cite-88338">
+http://www.avial.com.au                <span id="dsq-author-user-88338">Joel</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88338" class="dsq-comment-body">
+            <div id="dsq-comment-message-88338" class="dsq-comment-message"><p>Works in Firefox for me, but not Chrome 22.0.1229.79.</p>
+<p>I&#8217;m wondering what could be done about the flickering of the distant text. Googling to try to find the name of the effect &#8211; it might be called a Moiré interference pattern. When rendering the distant text, a single sample of the area is taken, which is either all white or all black, and as the text moves slightly, it can cause the opposite sample to be taken, which makes it flicker. To fix that, it should taking an average of the colours in that area. I guess this is a job for browser vendors?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-88339">
+        <div id="dsq-comment-header-88339" class="dsq-comment-header">
+            <cite id="dsq-cite-88339">
+http://pixmasta.com/                <span id="dsq-author-user-88339">Glow</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88339" class="dsq-comment-body">
+            <div id="dsq-comment-message-88339" class="dsq-comment-message"><p>It&#8217;s working on IE10 preview</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-88341">
+        <div id="dsq-comment-header-88341" class="dsq-comment-header">
+            <cite id="dsq-cite-88341">
+http://www.logistica.ca                <span id="dsq-author-user-88341">Brad W</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88341" class="dsq-comment-body">
+            <div id="dsq-comment-message-88341" class="dsq-comment-message"><p>Oh wow &#8211; this is so cool. I&#8217;ve always wanted to reproduce the Star Wars scrolling text effect. Looks good in win 7, chrome.</p>
+<p>Solo did shoot first&#8230; I was there for the original man!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-88342">
+        <div id="dsq-comment-header-88342" class="dsq-comment-header">
+            <cite id="dsq-cite-88342">
+                <span id="dsq-author-user-88342">Jeremy L</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88342" class="dsq-comment-body">
+            <div id="dsq-comment-message-88342" class="dsq-comment-message"><p>Fantastic!   Works well in Chrome and brought a real smile to my face.   All it needs now is for the scene to pan left to reveal the Galactic Empire&#8217;s mighty Star Destroyer blasting at Leia&#8217;s ship&#8230;  Any takers&#8230;?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-88343">
+        <div id="dsq-comment-header-88343" class="dsq-comment-header">
+            <cite id="dsq-cite-88343">
+                <span id="dsq-author-user-88343">Davit</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88343" class="dsq-comment-body">
+            <div id="dsq-comment-message-88343" class="dsq-comment-message"><p>Awesome but barely useable, as the rest of css3+html5 crap.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-88344">
+        <div id="dsq-comment-header-88344" class="dsq-comment-header">
+            <cite id="dsq-cite-88344">
+                <span id="dsq-author-user-88344">John</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88344" class="dsq-comment-body">
+            <div id="dsq-comment-message-88344" class="dsq-comment-message"><p>I don&#8217;t see how this could work in in all browsers as it&#8217;s missing this in the #titles:</p>
+<p>-webkit-transform-origin: 50% 100%;<br />
+	-moz-transform-origin: 50% 100%;<br />
+	-ms-transform-origin: 50% 100%;<br />
+	-o-transform-origin: 50% 100%;<br />
+	transform-origin: 50% 100%;<br />
+	-webkit-transform: perspective(300px) rotateX(25deg);<br />
+	-moz-transform: perspective(300px) rotateX(25deg);<br />
+	-ms-transform: perspective(300px) rotateX(25deg);<br />
+	-o-transform: perspective(300px) rotateX(25deg);<br />
+	transform: perspective(300px) rotateX(25deg);</p>
+<p>and missing #titles:after</p>
+<p>background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);<br />
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);<br />
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);<br />
+	background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);<br />
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);<br />
+pointer-events: none;</p>
+<p>He did point out at the end of his article to view the source code, but that could have been probably explained a little better.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-88345">
+        <div id="dsq-comment-header-88345" class="dsq-comment-header">
+            <cite id="dsq-cite-88345">
+http://juleswebb.com                <span id="dsq-author-user-88345">Jules Webb</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88345" class="dsq-comment-body">
+            <div id="dsq-comment-message-88345" class="dsq-comment-message"><p>Love it!</p>
+<p>I&#8217;ve been playing around with it and it&#8217;s so CCS (cool, creative, and simple).<br />
+The one thing I&#8217;m struggling with is adjusting the movement amount and timing depending on the quantity of text shown. Is that controlled by animation or keyframes?</p>
+<p>Thanks!<br />
+Jules</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-2" id="dsq-comment-88346">
+        <div id="dsq-comment-header-88346" class="dsq-comment-header">
+            <cite id="dsq-cite-88346">
+http://juleswebb.com                <span id="dsq-author-user-88346">Jules Webb</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-88346" class="dsq-comment-body">
+            <div id="dsq-comment-message-88346" class="dsq-comment-message"><p>Well, I finally figured it out&#8230;</p>
+<p>Since my scrolling text was so much shorter, and the effect is within a blog post, I needed to reduce the height of #titles as well as  reduce the @keyframes scroll  top from -170% to -100%.</p>
+<p>I also modified it to be responsive.  Looks pretty good on an iphone. </p>
+<p>I showed my husband this effect and it inspired him to write a short story so I could implement it on a live site. If you want to check it out go to: <a href="http://eddwebb.com/blog/the-a-hole-clause-episode-1" rel="nofollow">http://eddwebb.com/blog/the-a-hole-clause-episode-1</a></p>
+<p>Cheers!<br />
+Jules</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://www.sitepoint.com/css3-starwars-scrolling-text/';
+    var disqus_identifier = '59891 http://www.sitepoint.com/?p=59891';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'sitepointproduction';
+    var disqus_title = "Star Wars 3D Scrolling Text in CSS3";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=59891';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/www.sitepoint.com\/css3-starwars-scrolling-text\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/embed.js?pname=wordpress&pver=2.74';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+
+      </article>
+    </div>
+  
+  <aside class="page_aside article_aside">
+    <div class="adrow--top">
+      <div class="widget maestro maestro-content-type-ad hide-for-mobile-SP" id="maestro-product-1"><!-- SP2013_Articles_300x250_1 -->
+<div id="div-gpt-ad-1392428092543-0" style="width:300px; height:250px;" class="adspot">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("div-gpt-ad-1392428092543-0"); });</script>
+ </div></div>    </div>
+    <div class="adrow--middle">
+      <div class="widget maestro maestro-content-type-ad hide-for-mobile-SP" id="maestro-product-172"><!-- Sitepoint_125x125 -->
+<div id="div-gpt-ad-1400800012700-0" style="width:125px; height:125px;" class="adspot">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("div-gpt-ad-1400800012700-0"); });</script>
+ </div></div><div class="widget maestro maestro-content-type-ad hide-for-mobile-SP" id="maestro-product-166"><!-- Sitepoint_125x125_2 -->
+<div id="div-gpt-ad-1400782268851-0" style="width:125px; height:125px;" class="adspot">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("div-gpt-ad-1400782268851-0"); });</script>
+ </div></div><div class="widget maestro maestro-content-type-ad hide-for-mobile-SP" id="maestro-product-167"><!-- Sitepoint_125x125_3 -->
+<div id="div-gpt-ad-1400782991292-0" style="width:125px; height:125px;" class="adspot">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("div-gpt-ad-1400782991292-0"); });</script>
+ </div></div><div class="widget maestro maestro-content-type-ad hide-for-mobile-SP" id="maestro-product-168"><!-- Sitepoint_125x125_4 -->
+<div id="div-gpt-ad-1400783440189-0" style="width:125px; height:125px;" class="adspot">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("div-gpt-ad-1400783440189-0"); });</script>
+ </div></div><div class="widget maestro maestro-content-type-ad hide-for-mobile-SP" id="maestro-product-169"><!-- Sitepoint_125x125_5 -->
+<div id="div-gpt-ad-1400783664460-0" style="width:125px; height:125px;" class="adspot">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("div-gpt-ad-1400783664460-0"); });</script>
+ </div></div><div class="widget maestro maestro-content-type-ad hide-for-mobile-SP" id="maestro-product-170"><!-- Sitepoint_125x125_6 -->
+<div id="div-gpt-ad-1400783847643-0" style="width:125px; height:125px;" class="adspot">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("div-gpt-ad-1400783847643-0"); });</script>
+ </div></div>    </div>
+    <div class="adrow--bottom">
+      <div class="widget maestro maestro-content-type-ad hide-for-mobile-SP" id="maestro-product-48"><!-- SP2013_Articles_300x250_4 -->
+<div id="div-gpt-ad-1392428092543-3" style="width:300px; height:250px;" class="adspot">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("div-gpt-ad-1392428092543-3"); });</script>
+ </div></div><div class="widget maestro maestro-content-type-ad hide-for-mobile-SP" id="maestro-product-49"><!-- SP2013_Articles_300x600_1 -->
+<div id="div-gpt-ad-1392428092543-4" style="width:300px; height:600px;" class="adspot">
+    <script type="text/javascript">googletag.cmd.push(function() { googletag.display("div-gpt-ad-1392428092543-4"); });</script>
+ </div></div>    </div>
+  </aside>
+
+</main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="row">
+
+        <ul class="footer-links">
+          <li class="foot-link_item">
+            <h3>About</h3>
+          </li>
+          <li class="foot-link_item">
+            <a href="/about-us/">About us</a>
+          </li>
+          <li class="foot-link_item">
+            <a href="/advertising">Advertise</a>
+          </li>
+          <li class="foot-link_item">
+            <a href="/legals">Legals</a>
+          </li>
+          <li class="foot-link_item">
+            <a href="mailto:feedback@sitepoint.com">Feedback</a>
+          </li>
+          <li class="foot-link_item">
+            <a href="/write-for-us">Write for Us</a>
+          </li>
+        </ul>
+
+        <ul class="footer-links">
+          <li class="foot-link_item">
+            <h3>Our Sites</h3>
+          </li>
+          <li class="foot-link_item">
+            <a href="https://learnable.com" target="_blank">Learnable</a>
+          </li>
+          <li class="foot-link_item">
+            <a href="http://reference.sitepoint.com" target="_blank">Reference</a>
+          </li>
+          <li class="foot-link_item">
+            <a href="/hosting-reviews/" target="_blank">Hosting Reviews</a>
+          </li>
+          <li class="foot-link_item">
+            <a href="/web-foundations/">Web Foundations</a>
+          </li>
+        </ul>
+
+        <ul class="footer-links">
+          <li class="foot-link_item">
+            <h3>Connect</h3>
+          </li>
+          <li class="foot-link_item foot-link_item--icons">
+            <a href="/feed"><i class="icon-rss icon-blocks icon-blocks--rss"></i></a>
+            <a href="/newsletter"><i class="icon-envelope-alt icon-blocks icon-blocks--newsletter"></i></a>
+            <a href="https://www.facebook.com/sitepoint" target="_blank"><i class="icon-facebook icon-blocks icon-blocks--facebook"></i></a>
+            <a href="http://twitter.com/sitepointdotcom" target="_blank"><i class="icon-twitter icon-blocks icon-blocks--twitter"></i></a>
+            <a href="https://plus.google.com/+sitepoint" target="_blank"><i class="icon-google-plus icon-blocks icon-blocks--google-plus"></i></a>
+          </li>
+        </ul>
+
+        <p class="site-footer_copyright">
+          &copy; 2000 &ndash; 2014 SitePoint Pty. Ltd.
+        </p>
+
+      </div>
+    </footer>
+
+    <div id="search-dropdown">
+      <div data-role="search-for">
+        <a class="search-link" href="#">Search for...</a>
+      </div>
+      <ul data-role="results"></ul>
+    </div>
+
+    				<script type='text/javascript'><!--
+			var seriesdropdown = document.getElementById("orgseries_dropdown");
+			if (seriesdropdown) { 
+			 function onSeriesChange() {
+					if ( seriesdropdown.options[seriesdropdown.selectedIndex].value != ( 0 || -1 ) ) {
+						location.href = "http://www.sitepoint.com/series/"+seriesdropdown.options[seriesdropdown.selectedIndex].value;
+					}
+				}
+				seriesdropdown.onchange = onSeriesChange;
+			}
+			--></script>
+			<div class="triggered-cta-box-wrapper-bg"></div>
+<div id="triggered-cta-box-wrapper" class="triggered-cta-box-wrapper triggered-cta-box-wrapper--fullpage"><a href="#close" id="triggered-cta-box-close">x</a></div>
+<script type="text/javascript">
+  (function () {
+    var variant = (Math.random() < 0 ? "a" : "b");
+    var boxContents = {
+      a: '<!-- Free ebook: Triggered CTA Box custom style (201403-free-ebook-popup) --><div class="close-link-wrapper">  <a href="#" class="triggered-cta-box-close-link">Go to SitePoint.com</a></div><div class="triggered-cta-box campaign-free-ebook">  <div class="campaign-free-ebook__row1">    <div class="campaign-free-ebook__row1__column1">      <p class="logo-wrapper"><img src="http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2014/02/1392770725sp-logo-42x50.png" alt="SitePoint logo" /></p>      <h1>Free book: Jump Start HTML5 Basics</h1>      <p>Grab a free copy of one our latest ebooks! Packed with hints and tips on HTML5&#39;s most powerful new features.</p>    </div>    <div class="campaign-free-ebook__row1__column2">      <img class="books-image" src="//d2sis3lil8ndrq.cloudfront.net/books/jshtml-basics1_medium_3d.png" alt="Jump Start HTML Basics book cover image" />    </div>  </div>  <div class="campaign-free-ebook__row2">    <form>      <div class="campaign-free-ebook__row2__div1">        <div class="campaign-free-ebook__row2__div1__column1">          <input type="email" name="email" id="email" placeholder="Email address">        </div>        <div class="campaign-free-ebook__row2__div1__column2">          <input type="hidden" name="submitted" id="submitted" value="true" />          <input type="hidden" name="content" value="29">          <button id="triggered-cta-box-submit" class="btn-buy button success">Claim Book</button>        </div>      </div>      <div class="campaign-free-ebook__row2__div2">        <div class="campaign-free-ebook__row2__div2__column1">          <p id="triggered-cta-box-message"></p>        </div>      </div>    </form>  </div></div>',
+      b: '<!-- Learnable Free Trial v2 (201406-free-trial-v2) --><div class="close-link-wrapper">  <a href="#" class="triggered-cta-box-close-link">Go to SitePoint.com</a></div><div class="triggered-cta-box campaign-free-trial-v2">  <div class="bg-wrapper"></div>  <div class="campaign-free-trial-v2__row1">    <h1>Join 100,000+ web developers using Learnable to master new skills</h1>  </div>  <div class="campaign-free-trial-v2__row2">    <a class="submit-btn btn-buy button" href="https://learnable.com/join/231/account?utm_source=sitepoint&utm_medium=modal&utm_content=012&utm_campaign=free-trial">Try Learnable FREE for 14 days</a>  </div>  <div class="campaign-free-trial-v2__row3">    <div class="campaign-free-trial-v2__row3__col1">      <p class="row">        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="36" height="26" viewBox="0 0 100 100">            <g transform="translate(-25,80)">                <g transform="scale(0.17,-0.17)">                    <path fill="#1C94C6" d="M 655.32,172.276c0-7.052, 0.737-16.403-0.847-22.039c0-3.11,0-6.214,0-9.324c-0.28-6.782-0.568-13.561-0.847-20.344c-0.28,0-0.568,0-0.847,0c0-3.39,0-6.782,0-10.172        c-0.28,0-0.568,0-0.847,0c0-2.822,0-5.654,0-8.477c-0.28,0-0.568,0-0.847,0c0-2.542,0-5.086,0-7.629c-0.28,0-0.568,0-0.847,0c0-1.974,0-3.958,0-5.934        c-0.28,0-0.568,0-0.847,0c0-1.974,0-3.958,0-5.934c-1.646-5.638-2.552-13.188-4.237-18.65c0-1.415,0-2.822,0-4.237c-0.28,0-0.568,0-0.847,0c0-1.126,0-2.263,0-3.39        c-0.28,0-0.568,0-0.847,0c0-0.847,0-1.695,0-2.542c-0.28,0-0.568,0-0.847,0c0-0.847,0-1.695,0-2.542c-0.28,0-0.568,0-0.847,0c0-0.847,0-1.695,0-2.542c-0.28,0-0.568,0-0.847,0c0-0.847,0-1.695,0-2.542        c-0.28,0-0.568,0-0.847,0c-0.568-1.695-1.126-3.39-1.695-5.086c-0.28,0-0.568,0-0.847,0c0-0.568,0-1.126,0-1.695c-0.28,0-0.568,0-0.847,0c-0.28-1.126-0.568-2.263-0.847-3.39        c-0.28,0-0.568,0-0.847,0c-0.28-0.847-0.568-1.695-0.847-2.542c-0.568-0.28-1.126-0.568-1.695-0.847c0-0.568,0-1.126,0-1.695c-0.568-0.28-1.126-0.568-1.695-0.847c0-0.568,0-1.126,0-1.695        c-1.415-1.126-2.822-2.263-4.237-3.39c0-0.568,0-1.126,0-1.695c-1.415-1.126-2.822-2.263-4.237-3.39c-0.28-0.568-0.568-1.126-0.847-1.695c-0.568,0-1.126,0-1.695,0        c-1.126-1.415-2.263-2.822-3.39-4.237c-0.568,0-1.126,0-1.695,0c-0.568-0.847-1.126-1.695-1.695-2.542c-1.126-0.28-2.263-0.568-3.39-0.847c-0.28-0.568-0.568-1.126-0.847-1.695        c-1.126-0.28-2.263-0.568-3.39-0.847c0-0.28,0-0.568,0-0.847c-1.695-0.568-3.39-1.126-5.086-1.695c0-0.28,0-0.568,0-0.847c-2.542-0.568-5.086-1.126-7.629-1.695c0-0.28,0-0.568,0-0.847        c-1.126,0-2.263,0-3.39,0c0-0.28,0-0.568,0-0.847c-1.415,0-2.822,0-4.237,0c0-0.28,0-0.568,0-0.847c-1.974,0-3.958,0-5.934,0c0-0.28,0-0.568,0-0.847        c-12.995-0.847-25.997-1.695-38.993-2.542c0-0.28,0-0.568,0-0.847c-4.519,0-9.046,0-13.561,0c0-0.28,0-0.568,0-0.847c-5.367,0-10.741,0-16.106,0c0-0.28,0-0.568,0-0.847        c-1.126,0-2.263,0-3.39,0c-5.367,0-10.741,0-16.106,0c0-0.28,0-0.568,0-0.847c-8.756,0-17.523,0-26.279,0c-8.519-2.382-22.151-0.841-32.211-0.847        c-2.822,0-5.654,0-8.477,0c0-0.28,0-0.568,0-0.847c-14.691,0-29.39,0-44.078,0c-19.208,0-38.434,0-57.643,0c-9.053,0-21.268-1.273-28.821,0.847        c-3.11,0-6.214,0-9.324,0c-9.808,0-23.091-1.475-31.363,0.847c-6.214,0-12.436,0-18.65,0c-9.046,0.28-18.080,0.568-27.127,0.847c0,0.28,0,0.568,0,0.847        c-4.654,1.305-11.985-0.314-16.106,0.847c-8.477,0.28-16.955,0.568-25.432,0.847c0,0.28,0,0.568,0,0.847c-3.39,0-6.782,0-10.172,0c0,0.28,0,0.568,0,0.847c-2.822,0-5.654,0-8.477,0        c0,0.28,0,0.568,0,0.847c-2.822,0-5.654,0-8.477,0c0,0.28,0,0.568,0,0.847c-1.974,0-3.958,0-5.934,0c0,0.28,0,0.568,0,0.847c-1.415,0-2.822,0-4.237,0        c0,0.28,0,0.568,0,0.847c-1.126,0-2.263,0-3.39,0c0,0.28,0,0.568,0,0.847c-2.542,0.568-5.086,1.126-7.629,1.695c0,0.28,0,0.568,0,0.847c-1.695,0.568-3.39,1.126-5.086,1.695        c0,0.28,0,0.568,0,0.847c-1.126,0.28-2.263,0.568-3.39,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c-0.568,0.847-1.126,1.695-1.695,2.542        c-0.568,0-1.126,0-1.695,0c-0.847,1.126-1.695,2.263-2.542,3.39c-0.568,0-1.126,0-1.695,0c-1.695,1.974-3.39,3.958-5.086,5.934c-0.847,0.568-1.695,1.126-2.542,1.695c0,0.568,0,1.126,0,1.695        c-1.126,0.847-2.263,1.695-3.39,2.542c0,0.568,0,1.126,0,1.695c-0.847,0.568-1.695,1.126-2.542,1.695c-0.28,1.126-0.568,2.263-0.847,3.39c-0.568,0.28-1.126,0.568-1.695,0.847        c-0.28,1.126-0.568,2.263-0.847,3.39c-0.28,0-0.568,0-0.847,0c-0.568,1.695-1.126,3.39-1.695,5.086c-0.28,0-0.568,0-0.847,0c0,0.847,0,1.695,0,2.542c-0.28,0-0.568,0-0.847,0        c0,0.568,0,1.126,0,1.695c-0.28,0-0.568,0-0.847,0c-1.974,8.756-3.958,17.523-5.934,26.279c-0.28,3.958-0.568,7.909-0.847,11.866c-0.28,0-0.568,0-0.847,0        c0,1.974,0,3.958,0,5.934c-0.28,0-0.568,0-0.847,0c0,2.542,0,5.086,0,7.629c-0.28,0-0.568,0-0.847,0c0,2.822,0,5.654,0,8.477c-0.28,0-0.568,0-0.847,0c0,3.39,0,6.782,0,10.172        c-0.28,0-0.568,0-0.847,0c-0.28,6.502-0.568,12.995-0.847,19.496c0,3.11,0,6.214,0,9.324c-2.535,9.088-0.847,25.593-0.847,36.45c0,16.385,0,32.779,0,49.165        c0,7.807-0.931,18.224, 0.847,24.583c 0.28,9.603, 0.568,19.218, 0.847,28.821c 0.28,0, 0.568,0, 0.847,0c0,3.39,0,6.782,0,10.172c 0.28,0, 0.568,0, 0.847,0c0,2.542,0,5.086,0,7.629        c 0.28,0, 0.568,0, 0.847,0c0,2.542,0,5.086,0,7.629c 0.28,0, 0.568,0, 0.847,0c0,2.263,0,4.519,0,6.782c 0.28,0, 0.568,0, 0.847,0c0,1.974,0,3.958,0,5.934c 0.28,0, 0.568,0, 0.847,0        c 0.28,3.39, 0.568,6.782, 0.847,10.172c 0.28,0, 0.568,0, 0.847,0c 0.28,2.542, 0.568,5.086, 0.847,7.629c 0.28,0, 0.568,0, 0.847,0c0,1.415,0,2.822,0,4.237c 0.28,0, 0.568,0, 0.847,0        c0,1.126,0,2.263,0,3.39c 0.28,0, 0.568,0, 0.847,0c0,0.847,0,1.695,0,2.542c 0.28,0, 0.568,0, 0.847,0c0,0.847,0,1.695,0,2.542c 0.28,0, 0.568,0, 0.847,0c 0.28,1.695, 0.568,3.39, 0.847,5.086        c 0.28,0, 0.568,0, 0.847,0c 0.28,1.126, 0.568,2.263, 0.847,3.39c 0.28,0, 0.568,0, 0.847,0c0,0.568,0,1.126,0,1.695c 0.28,0, 0.568,0, 0.847,0c0,0.568,0,1.126,0,1.695l 1.695,1.695        c0,0.568,0,1.126,0,1.695c 0.568,0.28, 1.126,0.568, 1.695,0.847c0,0.568,0,1.126,0,1.695c 0.28,0, 0.568,0, 0.847,0c0,0.568,0,1.126,0,1.695c 0.847,0.568, 1.695,1.126, 2.542,1.695        c0,0.568,0,1.126,0,1.695c 1.415,1.126, 2.822,2.263, 4.237,3.39c0,0.568,0,1.126,0,1.695c 1.415,1.126, 2.822,2.263, 4.237,3.39c 0.28,0.568, 0.568,1.126, 0.847,1.695        c 0.568,0, 1.126,0, 1.695,0c 1.126,1.415, 2.263,2.822, 3.39,4.237c 0.568,0, 1.126,0, 1.695,0c 0.568,0.847, 1.126,1.695, 1.695,2.542c 1.126,0.28, 2.263,0.568, 3.39,0.847        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c0,0.28,0,0.568,0,0.847c 1.695,0.568, 3.39,1.126, 5.086,1.695c0,0.28,0,0.568,0,0.847c 0.847,0, 1.695,0, 2.542,0        c0,0.28,0,0.568,0,0.847c 0.847,0, 1.695,0, 2.542,0c0,0.28,0,0.568,0,0.847c 0.847,0, 1.695,0, 2.542,0c0,0.28,0,0.568,0,0.847c 1.126,0, 2.263,0, 3.39,0c0,0.28,0,0.568,0,0.847        c 1.126,0, 2.263,0, 3.39,0c0,0.28,0,0.568,0,0.847c 1.974,0, 3.958,0, 5.934,0c0,0.28,0,0.568,0,0.847c 2.822,0, 5.654,0, 8.477,0c0,0.28,0,0.568,0,0.847        c 3.11,0, 6.214,0, 9.324,0c0,0.28,0,0.568,0,0.847c 3.39,0, 6.782,0, 10.172,0c0,0.28,0,0.568,0,0.847c 3.671,0, 7.35,0, 11.019,0c0,0.28,0,0.568,0,0.847        c 4.519,0, 9.046,0, 13.561,0c 10.165,2.856, 25.372-0.332, 35.603,2.542c 15.258,0.28, 30.516,0.568, 45.775,0.847c 4.010,0, 15.783-0.906, 17.802,0.847c 46.055,0, 92.116,0, 138.17,0        c0-0.28,0-0.568,0-0.847c 1.415,0, 2.822,0, 4.237,0c 11.605-0.143, 25.404,0.841, 35.603-0.847c 7.926-1.305, 17.885,1.035, 24.583-0.847c 5.35-1.499, 14.267,0.617, 19.496-0.847        c 5.367,0, 10.741,0, 16.106,0c0-0.28,0-0.568,0-0.847c 4.519,0, 9.046,0, 13.561,0c0-0.28,0-0.568,0-0.847c 3.671,0, 7.35,0, 11.019,0c0-0.28,0-0.568,0-0.847        c 0.28,0, 0.568,0, 0.847,0c 3.11,0, 6.214,0, 9.324,0c0-0.28,0-0.568,0-0.847c 3.11,0, 6.214,0, 9.324,0c0-0.28,0-0.568,0-0.847c 4.805-0.28, 9.603-0.568, 14.409-0.847        c0-0.28,0-0.568,0-0.847c 1.126,0, 2.263,0, 3.39,0c0-0.28,0-0.568,0-0.847c 1.126,0, 2.263,0, 3.39,0c0-0.28,0-0.568,0-0.847c 0.847,0, 1.695,0, 2.542,0c0-0.28,0-0.568,0-0.847        c 0.847,0, 1.695,0, 2.542,0c0-0.28,0-0.568,0-0.847c 0.847,0, 1.695,0, 2.542,0c0-0.28,0-0.568,0-0.847c 1.695-0.568, 3.39-1.126, 5.086-1.695c0-0.28,0-0.568,0-0.847c 0.568,0, 1.126,0, 1.695,0        c0-0.28,0-0.568,0-0.847c 1.126-0.28, 2.263-0.568, 3.39-0.847c 0.28-0.568, 0.568-1.126, 0.847-1.695c 0.568,0, 1.126,0, 1.695,0c 0.568-0.847, 1.126-1.695, 1.695-2.542c 0.568,0, 1.126,0, 1.695,0        c 0.847-1.126, 1.695-2.263, 2.542-3.39c 0.568,0, 1.126,0, 1.695,0c 1.695-1.974, 3.39-3.958, 5.086-5.934c 0.847-0.568, 1.695-1.126, 2.542-1.695c0-0.568,0-1.126,0-1.695c 1.126-0.847, 2.263-1.695, 3.39-2.542        c 0.28-0.847, 0.568-1.695, 0.847-2.542c 0.568-0.28, 1.126-0.568, 1.695-0.847c 0.28-1.126, 0.568-2.263, 0.847-3.39c 0.568-0.28, 1.126-0.568, 1.695-0.847c 0.28-1.126, 0.568-2.263, 0.847-3.39        c 0.28,0, 0.568,0, 0.847,0c 0.568-1.695, 1.126-3.39, 1.695-5.086c 0.28,0, 0.568,0, 0.847,0c0-0.847,0-1.695,0-2.542c 0.28,0, 0.568,0, 0.847,0c0-0.847,0-1.695,0-2.542c 0.28,0, 0.568,0, 0.847,0        c0-0.847,0-1.695,0-2.542c 0.28,0, 0.568,0, 0.847,0c0-0.847,0-1.695,0-2.542c 0.28,0, 0.568,0, 0.847,0c0-1.126,0-2.263,0-3.39c 0.28,0, 0.568,0, 0.847,0c0-1.126,0-2.263,0-3.39        c 0.28,0, 0.568,0, 0.847,0c0-1.415,0-2.822,0-4.237c 0.28,0, 0.568,0, 0.847,0c0-1.695,0-3.39,0-5.086c 0.28,0, 0.568,0, 0.847,0c0-1.695,0-3.39,0-5.086c 0.28,0, 0.568,0, 0.847,0        c 0.847-8.477, 1.695-16.955, 2.542-25.432c 0.28,0, 0.568,0, 0.847,0c0-2.822,0-5.654,0-8.477c 0.28,0, 0.568,0, 0.847,0c0-3.39,0-6.782,0-10.172c 0.28,0, 0.568,0, 0.847,0c0-3.958,0-7.909,0-11.866        c 1.289-4.62-0.586-12.648, 0.847-17.802c 0.28,0, 0.568,0, 0.847,0c0-13.844,0-27.695,0-41.535C 655.32,201.098, 655.32,186.689, 655.32,172.276z         M 484.090,194.318c 1.527,3.407, 2.576,14.148,0,16.955c-0.593,2.466-3.433,7.275-5.086,8.477c-0.568,0-1.126,0-1.695,0c-0.568,0.847-1.126,1.695-1.695,2.542        c-1.126,0.28-2.263,0.568-3.39,0.847c0,0.28,0,0.568,0,0.847c-0.847,0.28-1.695,0.568-2.542,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847        c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c-0.28,0.568-0.568,1.126-0.847,1.695        c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c0,0.28,0,0.568,0,0.847c-0.847,0.28-1.695,0.568-2.542,0.847        c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c0,0.28,0,0.568,0,0.847c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695        c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c0,0.28,0,0.568,0,0.847c-0.847,0.28-1.695,0.568-2.542,0.847        c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695        c-1.126,0.28-2.263,0.568-3.39,0.847c0,0.28,0,0.568,0,0.847c-0.847,0.28-1.695,0.568-2.542,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847        c0,0.28,0,0.568,0,0.847c-0.847,0.28-1.695,0.568-2.542,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c0,0.28,0,0.568,0,0.847c-0.568,0-1.126,0-1.695,0        c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c0,0.28,0,0.568,0,0.847        c-0.847,0.28-1.695,0.568-2.542,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c0,0.28,0,0.568,0,0.847c-0.568,0-1.126,0-1.695,0        c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c0,0.28,0,0.568,0,0.847        c-0.847,0.28-1.695,0.568-2.542,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c0,0.28,0,0.568,0,0.847c-0.847,0.28-1.695,0.568-2.542,0.847        c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695        c-1.126,0.28-2.263,0.568-3.39,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847        c0,0.28,0,0.568,0,0.847c-0.847,0.28-1.695,0.568-2.542,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c-0.28,0.568-0.568,1.126-0.847,1.695        c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0        c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c0,0.28,0,0.568,0,0.847c-0.847,0.28-1.695,0.568-2.542,0.847c-0.28,0.568-0.568,1.126-0.847,1.695        c-1.126,0.28-2.263,0.568-3.39,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847        c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c0,0.28,0,0.568,0,0.847        c-0.847,0.28-1.695,0.568-2.542,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-0.568,0-1.126,0-1.695,0        c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847c-0.28,0.568-0.568,1.126-0.847,1.695c-1.126,0.28-2.263,0.568-3.39,0.847        c-0.28,0.568-0.568,1.126-0.847,1.695c-0.847,0-1.695,0-2.542,0c0,0.28,0,0.568,0,0.847c-3.671,0.28-7.35,0.568-11.019,0.847c0-0.28,0-0.568,0-0.847c-1.695-0.28-3.39-0.568-5.086-0.847        c0-0.28,0-0.568,0-0.847c-0.568,0-1.126,0-1.695,0c-0.28-0.568-0.568-1.126-0.847-1.695c-0.568,0-1.126,0-1.695,0c-0.28-0.568-0.568-1.126-0.847-1.695        c-1.126-0.847-2.263-1.695-3.39-2.542c-0.568-1.695-1.126-3.39-1.695-5.086c-0.28,0-0.568,0-0.847,0c-0.28-5.654-0.568-11.298-0.847-16.955c0-11.866,0-23.734,0-35.603c0-40.688,0-81.375,0-122.065        c0-11.866,0-23.734,0-35.603c 0.28-5.654, 0.568-11.298, 0.847-16.955c 0.28,0, 0.568,0, 0.847,0c 0.568-1.695, 1.126-3.39, 1.695-5.086c 1.126-0.847, 2.263-1.695, 3.39-2.542c 0.28-0.568, 0.568-1.126, 0.847-1.695        c 0.568,0, 1.126,0, 1.695,0c 0.28-0.568, 0.568-1.126, 0.847-1.695c 0.847,0, 1.695,0, 2.542,0c0-0.28,0-0.568,0-0.847c 0.568,0, 1.126,0, 1.695,0c0-0.28,0-0.568,0-0.847        c 1.415,0, 2.822,0, 4.237,0c0-0.28,0-0.568,0-0.847c 3.875-1.095, 7.366,0.882, 9.324,1.695c 0.847,0, 1.695,0, 2.542,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695        c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c0,0.28,0,0.568,0,0.847c 0.847,0.28, 1.695,0.568, 2.542,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695        c 1.126,0.28, 2.263,0.568, 3.39,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c0,0.28,0,0.568,0,0.847        c 0.847,0.28, 1.695,0.568, 2.542,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c0,0.28,0,0.568,0,0.847c 0.847,0.28, 1.695,0.568, 2.542,0.847        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695        c 1.126,0.28, 2.263,0.568, 3.39,0.847c0,0.28,0,0.568,0,0.847c 0.847,0.28, 1.695,0.568, 2.542,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847        c0,0.28,0,0.568,0,0.847c 0.847,0.28, 1.695,0.568, 2.542,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c0,0.28,0,0.568,0,0.847c 0.568,0, 1.126,0, 1.695,0        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c0,0.28,0,0.568,0,0.847        c 0.847,0.28, 1.695,0.568, 2.542,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c0,0.28,0,0.568,0,0.847c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695        c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c0,0.28,0,0.568,0,0.847c 0.847,0.28, 1.695,0.568, 2.542,0.847        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c0,0.28,0,0.568,0,0.847c 0.847,0.28, 1.695,0.568, 2.542,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695        c 1.126,0.28, 2.263,0.568, 3.39,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c0,0.28,0,0.568,0,0.847        c 0.847,0.28, 1.695,0.568, 2.542,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c0,0.28,0,0.568,0,0.847c 0.847,0.28, 1.695,0.568, 2.542,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695        c 1.126,0.28, 2.263,0.568, 3.39,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695        c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 1.126,0.28, 2.263,0.568, 3.39,0.847c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0        c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0c 0.28,0.568, 0.568,1.126, 0.847,1.695c 0.568,0, 1.126,0, 1.695,0        C 480.699,189.798, 482.395,192.053, 484.090,194.318z" />                </g>            </g>        </svg>        <span class="feature">4,500+ Videos</span>      </p>      <p class="row">        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="36" height="26" viewBox="0 0 100 100">            <g transform="translate(-10,80)">                <g transform="scale(0.17,-0.17)">                    <path fill="#1C94C6" d="M 139.073,67.282c0-22.939, 3.561-47.892-12.81-54.655c-11.144-4.603-31.999-1.709-46.116-1.709c-20.795,0-59.745-3.74-71.736,5.124c-8.532,6.311-7.686,21.786-7.686,36.722        c0,29.6,0,59.215,0,88.815c0,25.329,0,50.677,0,76.006c0,11.452-1.93,27.088, 1.709,35.868c 2.007,4.842, 7.114,9.949, 11.956,11.956c 2.4,0.999, 5.73,0.462, 7.686,1.709        c 25.62,0, 51.24,0, 76.86,0c 16.389,0, 30.207,0.282, 36.722-9.394c 6.986-10.376, 3.416-37.627, 3.416-53.802C 139.073,158.378, 139.073,112.827, 139.073,67.282z         M 70.753,53.618c 9.224,2.674, 20.607,15.432, 14.518,29.89c-3.928,9.326-12.314,13.288-26.474,12.81c-6.336-4.714-13.024-6.695-15.373-15.373        C 39.044,64.771, 54.458,48.895, 70.753,53.618zM 493.481,305.546c 23.519-9.924, 50.207-41.385, 38.429-80.275c-1.733-5.73-4.56-12.887-7.686-17.933c-2.605-4.201-7.328-7.285-8.541-12.81        c 7.711-9.651, 5.628-40.795, 0.854-52.094c-2.639-6.252-8.762-11.939-10.248-18.788c 10.47-14.578-4.551-52.683-10.248-60.634c-2.563-2.563-5.124-5.124-7.686-7.686c0-7.686,0-15.373,0-23.058        c-1.427-5.978-2.845-11.956-4.269-17.933c-6.217-14.851-16.738-27.054-29.89-35.014c-19.035-11.52-49.002-11.11-79.422-11.101c-54.681,0.017-97.364,13.356-137.493,28.182        c-14.569,5.38-29.386,9.506-44.408,13.664c-11.948,3.305-22.239,1.418-28.182,10.248c-4.543,6.755-3.416,19.471-3.416,30.744c0,22.486,0,44.98,0,67.465c0,32.161,0,64.341,0,96.502        c0,11.828-2.776,31.436, 1.709,40.138c 5.773,11.204, 25.432,12.665, 35.014,22.204c 21.298,21.213, 39.924,45.723, 58.072,70.028c 7.217,9.668, 18.335,17.038, 24.765,27.328        c 12.895,20.624, 10.871,49.933, 20.496,73.443c 4.021,9.821, 10.418,23.417, 18.788,29.036c 1.887,1.273, 4.304,1.247, 5.978,2.563c 40.838,0.657, 64.588-12.596, 75.151-41.846        c 1.427-7.405, 2.845-14.8, 4.269-22.204c0-5.696,0-11.383,0-17.080c 0.803-4.534, 0.726-16.15-0.854-22.204c-6.746-25.893-17.925-43.947-27.328-66.612c 31.025,0, 62.060,0, 93.085,0        C 475.273,306.93, 487.887,307.903, 493.481,305.546z" />                </g>            </g>        </svg>        <span class="feature">All Skill Levels</span>      </p>    </div>    <div class="campaign-free-trial-v2__row3__col2">      <p class="row">        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="36" height="26" viewBox="0 0 100 100">            <g transform="translate(-10,86)">                <g transform="scale(0.17,-0.17)">                    <path fill="#1C94C6" d="M 548.879,349.067c 6.354-19.871-4.814-40.814-9.357-54.44c-13.703-41.145-24.006-82.972-37.428-123.343c-13.678-41.154-24.031-82.964-37.428-123.343        c-7.834-23.614-11.152-47.917-28.922-61.246c-28.394-21.292-56.832-17.864-105.48-17.864c-59.537,0-119.098,0-178.636,0c-33.542,0-74.771-3.632-98.675,6.806        c-23.452,10.242-45.551,33.124-52.74,59.546c0,3.973,0,7.936,0,11.909c-0.009,15.516, 0.63,28.505, 3.402,40.831c 2.092,9.297-4.1,15.984-0.851,23.818        c 2.875,6.925, 9.732,12.496, 13.61,18.715c 7.103,11.39, 12.675,25.672, 17.864,38.279c 2.271,7.936, 4.534,15.882, 6.806,23.818c 1.548,6.635-3.088,14.24,0,20.415        c 2.484,4.967, 8.132,8.923, 11.058,13.61c 8.055,12.897, 13.771,29.977, 18.715,45.084c 1.71,5.231, 4.627,14.274, 3.402,20.415c-0.664,3.318-3.199,9.86-1.701,14.46        c 2.722,8.362, 11.517,12.317, 16.162,18.715c 6.831,9.417, 11.602,22.899, 16.162,34.025c 1.981,7.086, 3.973,14.18, 5.955,21.266c 2.007,8.439-3.939,15.031-1.701,22.116        c 2.713,8.566, 11.722,14.172, 16.162,21.266c 8.932,14.265, 11.483,37.726, 24.669,47.637c 3.233,2.424, 7.817,5.656, 11.909,6.806c 7.197,2.015, 15.627-1.464, 19.565-2.552        c 2.994-0.834, 8.685,1.964, 11.058,2.552c 2.619,0.655, 5.121-0.179, 6.806,0.851c 65.781,0, 131.569,0, 197.35,0c 28.871,0.009, 66.274,3.845, 83.363-8.507        c 30.036-21.709, 12.871-66.095, 2.552-96.974c-23.691-70.893-42.77-145.154-66.35-216.063c-8.285-24.923-14.027-50.094-23.818-72.304c-3.173-7.197-6.142-15.908-11.909-20.415        c-17.004-13.287-50.622-11.058-80.811-11.058c-59.256,0-118.529,0-177.784,0c-26.37,0-52.74,0-79.11,0c-3.318-1.114-5.325-4.61-7.656-6.806c-2.356-37.692, 37.156-35.727, 75.707-35.727        c 70.884,0, 141.778,0, 212.661,0c 21.215,0, 68.418-3.786, 83.363,2.552c 13.576,5.759, 14.665,18.434, 19.565,33.175c 6.303,18.961, 11.288,38.934, 17.864,58.695        c 21.641,65.040, 39.682,133.16, 61.246,198.2c 6.014,18.136, 10.599,36.17, 16.162,53.591c 1.607,5.035-0.247,14.325, 2.552,18.715c 2.654-2.297, 6.431-3.045, 9.357-5.104        C 540.313,366.436, 546.123,357.692, 548.879,349.067z M 419.58,390.748c-1.131,1.131-2.271,2.271-3.402,3.402c-70.314,0-140.646,0-210.96,0        c-1.769-1.701-5.24-2.39-6.806-4.253c-4.933-5.869-10.182-24.235-10.208-34.876c 10.514-6.703, 44.25-3.402, 61.246-3.402c 51.031,0, 102.086,0, 153.116,0c 1.846,1.786, 5.018,2.416, 6.806,4.253        C 414.12,360.763, 419.555,380.889, 419.58,390.748z M 391.509,296.326c 1.735,5.078, 0.808,11.237-3.402,12.76c-70.314,0-140.646,0-210.96,0        c-2.552-1.981-5.104-3.973-7.656-5.955c-4.168-6.142-10.514-27.613-7.656-34.876c 11.322-4.942, 34.757-1.701, 49.337-1.701c 37.428,0, 74.856,0, 112.285,0c 12.19,0, 24.388,0, 36.579,0        c 4.508,0, 12.326-1.004, 15.312,0.851C 385.716,270.739, 388.056,286.238, 391.509,296.326z" />                </g>            </g>        </svg>        <span class="feature">All SitePoint Books</span>      </p>      <p class="row">        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="36" height="26" viewBox="0 0 100 100">            <g transform="translate(-15,80)">                <g transform="scale(0.17,-0.17)">                    <path fill="#1C94C6" d="M 550.082,396.79c 10.613-17.098, 6.28-55.068, 6.28-81.651c0-64.196,0-128.414,0-192.611c0-33.037, 2.813-64.852-16.050-78.859        c-14.139-10.495-36.087-9.77-61.413-9.77c-38.146,0-76.305,0-114.45,0c-0.098-15.884, 5.534-27.504, 11.166-38.382c 4.020-7.768, 9.037-15.745, 2.093-25.123        c-5.807-7.844-21.976-6.28-35.592-6.28c-30.936,0-61.88,0-92.817,0c-14.049,0-31.697-1.864-37.685,6.28c-6.915,9.4-1.961,17.336, 2.093,25.123        c 5.771,11.089, 10.95,22.255, 11.166,38.382c-34.656,0-69.327,0-103.982,0c-43.003,0-72.321-3.195-85.139,27.914c-2.017,4.892-0.775,9.212-2.093,15.353        c-1.347,6.252-0.698,15.605-0.698,23.029c0,14.886,0,29.778,0,44.663c0,61.405,0,122.832,0,184.238c0,43.491-3.266,75.559, 30.007,86.535c 10.67,3.517, 26.324,2.093, 39.779,2.093        c 25.123,0, 50.247,0, 75.37,0c 84.665,0, 169.358,0, 254.024,0c 20.001,0, 40.015,0, 60.017,0c 11.842,0, 24.873,0.998, 34.194-2.093        C 535.886,412.472, 545.168,404.697, 550.082,396.79z M 521.469,143.465c0,20.698,0,41.412,0,62.11c0,57.456,0,114.917,0,172.373        c-1.625,1.625-3.258,3.258-4.886,4.886c-147.934,0-295.91,0-443.844,0c-1.625-1.625-3.258-3.258-4.886-4.886c0-20.698,0-41.412,0-62.11c0-57.456,0-114.917,0-172.373        c 1.625-1.625, 3.258-3.258, 4.886-4.886c 10.936,0, 21.865,0, 32.8,0c 27.678,0, 55.369,0, 83.046,0c 109.321,0, 218.677,0, 327.998,0        C 518.21,140.207, 519.842,141.84, 521.469,143.465z" />                </g>            </g>        </svg>        <span class="feature">Variety of Topics</span>      </p>    </div>  </div></div>'
+    };
+    var campaigns = {
+      a: "201404-free-ebook-popup",
+      b: "201406-free-trial-v2"
+    };
+    var triggeredCtaBoxWrapperEl = document.getElementById("triggered-cta-box-wrapper");
+    var boxContentsEl = document.createElement("div");
+
+    boxContentsEl.innerHTML = boxContents[variant];
+    triggeredCtaBoxWrapperEl.appendChild(boxContentsEl);
+
+    window.triggeredCtaBox = {
+      variant: variant,
+      boxSelector: "#triggered-cta-box-wrapper",
+      bgSelector: ".triggered-cta-box-wrapper-bg",
+      closeSelector: "#triggered-cta-box-close",
+      closeLinkSelector: ".triggered-cta-box-close-link",
+      campaign: campaigns[variant],
+      boxType: "fullpage",
+      mobileEnabled: false,
+      cookieLife: 14,
+      triggerType: "time",
+      triggerRequiredPages: 1,
+      triggerValue: 4,
+      slideSpeed: 1000,
+      ajaxUrl: "https://www.sitepoint.com/wp-admin/admin-ajax.php"
+    };
+  })();
+</script>
+<!--Plugin WP Missed Schedule 2013.1231.2013 Active - Tag 6707293c0218e2d8b7aa38d418ffa608-->
+
+<!-- This site is patched which an important unfixed problem since WordPress 2.5+ to 3.9+ -->
+
+
+
+<!-- START Parse.ly Include: Standard -->
+<div id="parsely-root" style="display: none">
+  <div id="parsely-cfg" data-parsely-site="sitepoint.com"></div>
+</div>
+<script>
+(function(s, p, d) {
+  var h=d.location.protocol, i=p+"-"+s,
+      e=d.getElementById(i), r=d.getElementById(p+"-root"),
+      u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+      :"static."+p+".com";
+  if (e) return;
+  e = d.createElement(s); e.id = i; e.async = true;
+  e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+})("script", "parsely", document);
+</script>
+<!-- END Parse.ly Include: Standard -->
+
+<script type='text/javascript' src='//www.sitepoint.com/wp-content/themes/sitepoint/assets/javascripts/scripts-foot-9decffc223f1d0846d30a396fea59f37.js?ver=3.9.2'></script>
+<script>
+                    $(document).ready(function() {
+                      $(".article_header__buttons .twitter-share-button").on("click", function (evt) {
+                        evt.preventDefault();
+
+                        var url = "https://twitter.com/intent/tweet?" + $.param({
+                          url: "http://www.sitepoint.com/css3-starwars-scrolling-text/",
+                          text: "Star Wars 3D Scrolling Text in CSS3",
+                          via: "sitepointdotcom"
+                        });
+
+                        var popupWidth = 550,
+                            popupHeight = 420,
+                            screenWidth = screen.width,
+                            screenHeight = screen.height,
+                            popupLeftOffset = Math.round(screenWidth / 2 - popupWidth / 2),
+                            popupTopOffset = 0;
+                        if (screenHeight > popupHeight) {
+                          popupTopOffset = Math.round(screenHeight / 2 - popupHeight / 2);
+                        }
+                        window.open(url, null, "scrollbars=yes,resizable=yes,toolbar=no,location=yes" + ", width=" + popupWidth + ", height=" + popupHeight + ", left=" + popupLeftOffset + ",top=" + popupTopOffset);
+                      });
+                    });
+                  </script><script>
+                    $(document).ready(function() {
+                      $(".article_header__buttons .subscribe-button").on("click", function (evt) {
+                        evt.preventDefault();
+
+                        var url = evt.target.href;
+
+                        var popupWidth = 550,
+                            popupHeight = 720,
+                            screenWidth = screen.width,
+                            screenHeight = screen.height,
+                            popupLeftOffset = Math.round(screenWidth / 2 - popupWidth / 2),
+                            popupTopOffset = 0;
+                        if (screenHeight > popupHeight) {
+                          popupTopOffset = Math.round(screenHeight / 2 - popupHeight / 2);
+                        }
+                        window.open(url, null, "scrollbars=yes,resizable=yes,toolbar=no,location=yes" + ", width=" + popupWidth + ", height=" + popupHeight + ", left=" + popupLeftOffset + ",top=" + popupTopOffset);
+                      });
+                    });
+                  </script><script>(function($){$(document).ready(function(){ if(typeof DISQUSWIDGETS != "undefined"){DISQUSWIDGETS.loadCount($, "sitepointproduction")} });})(jQuery);</script>
+  </body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using memcached
+Object Caching 948/1017 objects using memcached
+Content Delivery Network via Amazon Web Services: CloudFront: dab1nmslvvntp.cloudfront.net
+
+ Served from: www.sitepoint.com @ 2014-08-26 19:53:01 by W3 Total Cache -->

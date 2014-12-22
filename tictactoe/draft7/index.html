@@ -1,0 +1,126 @@
+
+
+<html ng-app='tictactoeApp'>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TICTACTOE</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+
+    <script src="js/app.js"></script>        
+	</head>
+
+	<body ng-controller="tictactoeController">
+		<h1>-----tic tac toe-----</h1>
+        <h1>star wars edition</h1> 
+
+        <!-- <section id="player_select" class="form-group" ng-hide="boardcreated"> -->        
+        <section ng-hide="data.gamestarted" class="gamestart">
+            <button class="startbutton" ng-click="makeBoard(data.size)">Start Game</button>
+            <input type="number" ng-model="data.size" />
+        </section>
+
+        <section ng-show="data.gamestarted" class="reset">
+            <button class="resetbutton" ng-click="reset(data.size)">Reset</button>
+        </section>
+
+    <section id="gameboard">
+        <div ng-repeat="row in data.board track by $index" class="row">
+            <div ng-repeat="cell in row track by $index"
+                 class="cell" 
+                 ng-style="{'width':(95/data.size)+'%', 'height': 0, 'padding-bottom':(95/data.size)+'%'  }"   
+                 ng-class="{xmark: cell == 'x', omark: cell == 'o'}" >
+                 
+                 <!-- this div is an empty cell just taken -->
+                <div ng-show="cell == 'e'"
+                     ng-click="takeCell($parent.$index, $index)"
+                     ng-style="{'height': 0, 'padding-bottom':'100%' }"  >
+                  {{ cell }}
+                </div>
+
+                <!-- leave the spot alone if it's already marked -->
+                <!-- this div is a marked cell -->
+                <div ng-show="cell != 'e'"
+                     ng-style="{'height': 0, 'padding-bottom':'100%'}"  >
+                    {{ cell }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+	</body>
+</html>
+
+
+
+
+<!--         <section id="gameboard">
+          <div ng-repeat="row in board track by $index" class="row">
+            <div ng-repeat="cell in row track by $index" 
+                 ng-click="takeCell($parent.$index, $index)" 
+                class="cell" 
+                ng-style="{'width':(100/size)+'%', 'height':(100/size)+'%'}" 
+                ng-class="{xmark: cell == 'x', omark: cell == 'o'}">
+                {{ cell }}
+            </div>
+          </div>
+        </section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

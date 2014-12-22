@@ -1,0 +1,28 @@
+ways to talk to API
+
+[1] curl
+
+[2] Javascript
+-XMLHTTPRequest
+-$http
+-$ajax = jQuery
+asynchronously, loads the blank template, then fills in the information after
+synchronously, get the template, fill the information, then give it to you.
+
+[3] POSTMAN
+
+BE NICE!!!
+calm........down.........
+i need to update my method
+focus, stay focused
+.......quiet.............
+
+$http is an object.
+it has a lot of its own functions.
+it has asynchronicity as one of its properties.
+blocking
+use then function to block, to save before disconnecting
+
+asynchronous vs. blocking
+streaming video game - asynchronous, continous rendering
+blocking - 

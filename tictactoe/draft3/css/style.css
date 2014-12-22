@@ -27,7 +27,6 @@ h1 {
 }
 
 #gameboard a:hover {
-    
   text-decoration: none;
   background-color: #99afca;
   color: #1030ba;
@@ -49,6 +48,7 @@ h1 {
   background-color: white;
   color: black;
 }
+
 
 .boardcreation {
   /* background-color: #572389; */

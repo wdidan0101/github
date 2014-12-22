@@ -1,6 +1,10 @@
-<h3 class="text-center">the poetic work of </h3>
-<h1 class="text-center"><%= @poet.name %> </h1>
+<h3 class="poetic-work">the poetic work of </h3>
+<h1 class="poet-name"><%= @poet.name %> </h1>
 <h4 class="text-center">of <%= @poet.origin %></h4>		
+
+<div class="filler"></div>
+
+<%= image_tag @poet.avatar.url(:medium), class: "avatar" %>
 
 <div class="filler"></div>
 

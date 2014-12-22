@@ -1,0 +1,135 @@
+
+
+<html ng-app='tictactoeApp'>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TICTACTOE</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+
+    <script src="js/app.js"></script>        
+	</head>
+
+	<body ng-controller="tictactoeController"
+        ng-init="clicked=false" ng-click="clicked=true">
+
+  <audio controls autoplay class="sound">
+    <source src="intro.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+<!-- ====================== OPENING CREDITS =========================-->
+  <div class="starwars" ng-hide="clicked" >
+    <p id="start" >A short time ago in a browser very, very close&hellip;</p>
+    
+    <h1 >STAR WARS<sub>TIC TAC TOE EDITION</sub></h1>
+     <div id="titles"><div id="titlecontent">
+
+      <p class="center">EPISODE V & 1/2<br />LUKE VS. VADER</p>
+      <p>It is a period of intergalactic tic tac toe warfare in the Star Wars universe.</p>
+      <p>Luke Skywalker, frustrated about his hand being severed by Darth Vader in Episode V, challenges the Sith Lord to a game of Tic Tac Toe to redeem his honor.</p>
+      <p>Vader, accepting Luke's challenge, meets his son in the depths of space to engage in a final round of Tic Tac Toe to determine who is truly the greater Jedi/Sith warrior...</p>
+      <p>Click anytime to end this...</p>
+    </div></div>
+  </div>
+<!-- ====================== GAMEPLAY =========================-->
+    <div class="gameHeader">
+		  <h2 class="gameHeader">-----tic tac toe-----</h1>
+      <h2 class="gameHeader">-----star wars edition-----</h1> 
+    </div>
+
+
+    <section ng-hide="data.gamestarted" class="gamestart">
+        <button class="startbutton" ng-click="makeBoard(data.size)">Start Game</button>
+        <input type="number" ng-model="data.size" />
+    </section>
+
+    <section ng-show="data.gamestarted" class="reset">
+        <button class="resetbutton" ng-click="reset(data.size)">Reset</button>
+    </section>
+
+    <section id="gameboard">
+        <div ng-repeat="row in data.board track by $index" class="row">
+            <div ng-repeat="cell in row track by $index"
+                 class="cell" 
+                 ng-style="{'width':(95/data.size)+'%', 'height': 0, 'padding-bottom':(95/data.size)+'%'  }"   
+                 ng-class="{xmark: cell == 'x', omark: cell == 'o'}" >
+                 
+                 <!-- this div is an empty cell just taken -->
+                <div ng-show="cell == 'e'"
+                     ng-click="takeCell($parent.$index, $index)"
+                     ng-style="{'height': 0, 'padding-bottom':'100%' }"  >
+                  {{ cell }}
+                </div>
+
+                <!-- leave the spot alone if it's already marked ...
+                <!-- this div is a marked cell -->
+                <div ng-show="cell != 'e'"
+                     ng-style="{'height': 0, 'padding-bottom':'100%'}"  >
+                    {{ cell }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

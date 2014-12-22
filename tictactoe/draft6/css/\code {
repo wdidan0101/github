@@ -1,0 +1,21 @@
+\code {
+  "scopes": [
+"user",
+"user:email",
+"public_repo",
+"repo",
+"read:org"
+  ],
+  "note": "GA Team API Example"
+}
+
+{
+  "scopes": [
+	"user",
+	"user:email",
+	"public_repo",
+	"repo",
+	"read:org"
+  ],
+  "note": "GA Team API Example"
+}

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'welcome/index'
-
   #root 'poets#index'
 
   ### POET ROUTES ##################################
@@ -37,6 +35,13 @@ Rails.application.routes.draw do
   get 'signup/' => 'users#new', as: :signup
   get 'users/new' => 'users#new'
   post 'users/' => 'users#create'
+
+  get 'users/:user_id' => 'users#show', as: :user
+  patch 'users/:user_id' => 'users#update'
+  put 'users/:user_id' => 'users#update'
+  delete 'users/:user_id' => 'users#destroy'
+
+  get 'users/:user_id/edit' => 'users#edit', as: :edit_user
 
   ### SESSIONS ROUTES #################################
 
